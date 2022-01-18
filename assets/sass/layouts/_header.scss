@@ -1,0 +1,75 @@
+// ---------------------------------------------------------===
+// Header styles
+// ---------------------------------------------------------===
+
+#header {
+    padding: 40px 0;
+    position: relative;
+
+    &:after {
+        @include box-align(hc);
+        content: "";
+        top: 100%;
+        background: url('#{$image-path}/bg-nav.png') no-repeat 50% 0 / contain;
+        width: 1682px;
+        height: 185px;
+        pointer-events: none;
+    }
+
+    > .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        position: relative; 
+    }
+
+    .nav-opener {
+        @include box-align(vc);
+        right: 20px;
+        color: color(black,2);
+        font-size: 20px;
+    }
+
+    .logo {
+        width: 215px;
+
+        a {
+            display: block;
+        }
+    }
+}
+
+.nav-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-right: 66px;
+}
+
+#nav {
+
+    > ul {
+        @extend %listreset;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0 -17px;
+
+        > li {
+            padding: 0 17px;
+
+            > a {
+                color: color(black,2);
+            }
+        }
+    }
+}
+
+.search-nav {
+    padding-left: 44px;
+
+    a {
+        color: color(black,2);
+    }
+}

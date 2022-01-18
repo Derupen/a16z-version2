@@ -1,0 +1,69 @@
+// ---------------------------------------------------------===
+// Typography
+// ---------------------------------------------------------===
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.h {
+    font-family: $headings-font-family;
+    font-weight: bold;
+    margin: 0 0 0.5em;
+    color: $headings-color;
+    font-weight: 700;
+}
+
+h1, .h1 {
+    font-size: $h1-font-size;
+    line-height: 1;
+    letter-spacing: -0.015em;
+}
+
+h2, .h2 {
+    font-size: $h2-font-size;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+}
+
+h3, .h3 {
+    font-size: $h3-font-size;
+    line-height: 1.083;
+    letter-spacing: -0.5px;
+}
+
+h4, .h4 {
+    font-size: $h4-font-size;
+    line-height: 0.778;
+    letter-spacing: -0.015em;
+}
+
+h5, .h5 {
+    font-size: $h5-font-size;
+    line-height: 1.172;
+    letter-spacing: -1px;
+}
+
+h6, .h6 {
+    font-size: $h6-font-size;
+    line-height: 1.2179;
+    letter-spacing: -0.5px;
+    font-weight: 800;
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+a {
+    @include animate(color);
+    color: $base-link-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}

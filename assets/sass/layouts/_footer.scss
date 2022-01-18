@@ -1,0 +1,86 @@
+// ---------------------------------------------------------===
+// Footer styles
+// ---------------------------------------------------------===
+
+#footer {
+    display: table-footer-group;
+    height: 1%;
+    color: color(white,1);
+
+    .inner {
+        background: color(black,2);
+        padding: 53px 0 50px;
+    }
+
+    .container {
+        max-width: 1222px;
+    }
+
+    .logo {
+        width: 145px;
+    }
+
+    .footer-content {
+        padding-top: 25px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer-nav {
+        padding-left: 49px;
+    }
+
+    .social-networks {
+        padding-left: 63px;
+    }
+}
+
+.footer-nav {
+    @extend %listreset;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: -5px -12px;
+
+    li {
+        padding: 5px 12px;
+
+        a {
+            color: color(white,1);
+
+            &:hover {
+                color: color(orange,1);
+            }
+        }
+    }
+}
+
+.social-networks {
+    @extend %listreset;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: -5px -11px;
+
+    li {
+        padding: 5px 11px;
+
+        a {
+            display: block;
+            color: color(white,1);
+            font-size: 17px;
+
+            &:hover {
+                color: color(orange,1);
+            }
+        }
+
+        .icon-twitter {
+            font-size: 13px;
+        }
+
+        .icon-future {
+            font-size: 12px;
+        }
+    }
+}

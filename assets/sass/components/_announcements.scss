@@ -1,0 +1,163 @@
+// ---------------------------------------------------------===
+// Announcement styles
+// ---------------------------------------------------------===
+
+.recent-announcements-list {
+    @extend %listreset;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -20px -12px;
+
+    li {
+        width: 33.33%;
+        padding: 20px 12px;
+    }
+
+    a {
+        display: block;
+
+        &:hover {
+
+            .card {
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+                .wrap {
+                    transform: scale(1.05);
+                }
+
+                &.more .wrap {
+                    transform: none;
+                }
+            }
+        }
+    }
+
+    strong {
+        display: block;
+        font-weight: 800;
+        font-size: 12px;
+        line-height: 1.22;
+        letter-spacing: 2.5px;
+        color: color(gray,5);
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    h6 {
+        color: color(black,2);
+        margin-bottom: 10px;
+    }
+
+    span {
+        display: block;
+        color: color(gray,5);
+        font-weight: 600;
+    }
+}
+
+.card {
+    @include animate(box-shadow);
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+
+    .wrap {
+        @include animate(transform);
+        width: 100%;
+        padding-top: 62.62%;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: cover;
+        }
+    }
+
+    &.p1 .wrap:before {
+        background-image: url('#{$image-path}/pattern-1.svg');
+    }
+
+    &.p2 .wrap:before {
+        background-image: url('#{$image-path}/pattern-2.svg');
+    }
+
+    &.p3 .wrap:before {
+        background-image: url('#{$image-path}/pattern-3.svg');
+    }
+
+    &.p4 .wrap:before {
+        background-image: url('#{$image-path}/pattern-4.svg');
+    }
+
+    &.p5 .wrap:before {
+        background-image: url('#{$image-path}/pattern-5.svg');
+    }
+
+    &.p6 .wrap:before {
+        background-image: url('#{$image-path}/pattern-6.svg');
+    }
+
+    &.p7 .wrap:before {
+        background-image: url('#{$image-path}/pattern-7.svg');
+    }
+
+    &.p8 .wrap:before {
+        background-image: url('#{$image-path}/pattern-8.svg');
+    }
+
+    &.p9 .wrap:before {
+        background-image: url('#{$image-path}/pattern-9.svg');
+    }
+
+    &.orange {
+        background: color(orange,1);
+    }
+
+    &.blue {
+        background: color(blue,1);
+    }
+
+    &.green {
+        background: color(green,1);
+    }
+
+    &.dark-blue {
+        background: color(blue,3);
+    }
+
+    &.black {
+        background: color(black,2);
+    }
+
+    .logo {
+        @include box-align(vhc);
+    }
+
+    .text {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        max-width: 200px;
+        padding-right: 34px;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+        color: color(white);
+        font-weight: 800;
+
+        &:after {
+            content: "\e916";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font: 16px/1 "icomoon";
+        }
+    }
+}

@@ -1,0 +1,66 @@
+// ---------------------------------------------------------===
+// Common styles
+// ---------------------------------------------------------===
+
+.link {
+    display: inline-flex;
+    align-items: center;
+    padding-right: 30px;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: color(blue,1);
+    position: relative;
+    font-weight: 800;
+
+    &:after {
+        content: "\e915";
+        @include box-align(vc);
+        right: 0;
+        font: 16px/1 "icomoon";
+    }
+
+    &:hover {
+        color: color(green,1);
+    }
+}
+
+.author {
+    display: block;
+    color: color(gray,5);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 0.8;
+    letter-spacing: -0.5px;
+}
+
+.news-latest {
+    padding-top: 74px;
+
+    h2 {
+        color: color(orange,1);
+        margin-bottom: 64px;
+    }
+}
+
+.content-holder {
+    @extend %listreset;
+    display: flex;
+    flex-wrap: wrap;
+
+    .content {
+        flex: 1;
+        padding: 0 59px 90px 0;
+    }
+
+    .aside {
+        width: 405px;
+        border-left: 1px solid color(gray,5);
+        padding: 0 0 90px 59px;
+
+        h6 {
+            text-transform: uppercase;
+            margin-bottom: 53px;
+        }
+    }
+}

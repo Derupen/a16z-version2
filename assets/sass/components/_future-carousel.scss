@@ -1,0 +1,32 @@
+// ---------------------------------------------------------===
+// Future Carousel styles
+// ---------------------------------------------------------===
+
+.future-carousel {
+
+    .img {
+        position: relative;
+        z-index: 1;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .slide-content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        display: flex;
+        align-items: flex-end;
+        padding: 101px 0 46px;
+        font: 16px/1.125 $national;
+
+        .container {
+            width: 100%;
+        }
+    }
+}

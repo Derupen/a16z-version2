@@ -1,0 +1,68 @@
+// ---------------------------------------------------------===
+// Upcoming events styles
+// ---------------------------------------------------------===
+
+.events-list {
+    @extend %listreset;
+    margin-bottom: 60px;
+
+    li {
+        display: flex;
+        flex-wrap: wrap;
+
+        + li {
+            margin-top: 53px;
+        }
+    }
+
+    .date {
+        width: 96px;
+        height: 96px;
+        border: 1px solid color(orange,1);
+        color: color(orange,1);
+        padding: 17px 10px;
+        text-align: center;
+        letter-spacing: -0.59px;
+
+        span {
+            display: block;
+            font-size: 18px;
+            line-height: 1.21;
+            letter-spacing: -0.59px;
+            text-transform: uppercase;
+        }
+
+        strong {
+            font-size: 48px;
+            line-height: 0.833;
+            font-weight: 800;
+        }
+    }
+
+    .info {
+        flex: 1;
+        padding-left: 24px;
+
+        strong {
+            display: block;
+            font-size: 12px;
+            line-height: 1.218;
+            font-weight: 800;
+            color: color(gray,5);
+            margin-bottom: 5px;
+        }
+
+        h6 {
+            margin-bottom: 13px;
+        }
+
+        span {
+            color: color(gray,5);
+            display: block;
+            font-size: 20px;
+            line-height: 0.8;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+// ---------------------------------------------------------===
+// Books styles
+// ---------------------------------------------------------===
+
+.books {
+	padding: 77px 0;
+
+	h2 {
+		color: color(orange,1);
+	}
+
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -23px -124px;
+
+		.col {
+			width: 50%;
+			padding: 23px 124px;
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
+	.book {
+		width: 266px;
+		margin-left: -40px;
+	}
+
+	.desc {
+		padding-left: 20px;
+		flex: 1;
+	}
+
+	.author {
+		margin-bottom: 20px;
+	}
+}
