@@ -17,11 +17,32 @@
         content: "\e915";
         @include box-align(vc);
         right: 0;
-        font: 16px/1 "icomoon";
+        font: 14px/1 "icomoon";
     }
 
     &:hover {
         color: color(green,1);
+    }
+}
+
+.btn {
+    @include animate(background color);
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px 20px;
+    font: 16px/1 $ProximaNova;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+
+    &.btn-black {
+        background: color(black,1);
+        color: color(white,1);
+
+        &:hover {
+            color: color(black,1);
+            background: color(white,1);
+        }
     }
 }
 
@@ -35,11 +56,11 @@
 }
 
 .news-latest {
-    padding-top: 74px;
+    padding-top: 82px;
 
     h2 {
         color: color(orange,1);
-        margin-bottom: 64px;
+        margin-bottom: 55px;
     }
 }
 
@@ -50,16 +71,22 @@
 
     .content {
         flex: 1;
-        padding: 0 59px 90px 0;
+        padding: 0 59px 100px 0;
     }
 
     .aside {
-        width: 405px;
+        width: 408px;
         border-left: 1px solid color(gray,5);
-        padding: 0 0 90px 59px;
+        padding: 0 0 100px 74px;
 
-        h6 {
-            text-transform: uppercase;
+        &.upcoming-events {
+            padding-top: 51px;
+        }
+
+        > h6 {
+            font-size: 20px;
+            line-height: 1.172;
+            letter-spacing: 2.5px;
             margin-bottom: 53px;
         }
     }

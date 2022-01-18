@@ -1,6 +1,10 @@
-import '../global.js'
+import '../global.js';
 import '../plugins/masonry'
-import slick from 'slick-carousel'
+// import '../plugins/swiper.js';
+// import Swiper from 'swiper'
+import 'swiper/swiper-bundle.css';
+import mCustomScrollbar from 'malihu-custom-scrollbar-plugin';
+import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css';
 
 
 export const MobileNav = () => {
@@ -99,26 +103,6 @@ export const CustomSelect = () => {
     });
 }
 
-export const Tabs = () => {
-    $('[data-tab]').click(function(e){
-        e.preventDefault();
-        var tab_id = $(this).attr('data-tab');
-
-        $(this).parent().siblings().find('[data-tab]').removeClass('active');
-        $("#"+tab_id).siblings().removeClass('active');
-
-        $(this).addClass('active');
-        $("#"+tab_id).addClass('active');
-    })
-    $('#'+$('[data-tab].active').data('tab')).addClass('active');
-}
-
-export const Slider = () => {
-    $('.future-carousel').slick({
-        dots: true,
-    });
-}
-
 export const Masonry = () => {
     jQuery(window).on('load masonry/refresh', function() {
         jQuery('.js-masonry').masonry({
@@ -145,25 +129,28 @@ export const initInlineSVG = () => {
     });
 }
 
-export const Modal = () => {
-    $('[data-modal]').on('click', function() {
-        $('body').addClass('modal-active');
-        $('.modal').removeClass('show');
-        $($(this).attr('href')).addClass('show');
-        return false;
-    });
-
-    jQuery('.modal .close').click(function(e) {
+export const Tabs = () => {
+    $('[data-tab]').click(function(e){
         e.preventDefault();
-        $('body').removeClass('modal-active');
-        $('.modal').removeClass('show');
-    });
+        var tab_id = $(this).attr('data-tab');
 
-    jQuery('html').on('click touchstart pointerdown MSPointerDown', function(e) {
-        var target = jQuery(e.target);
-        if(!target.closest('.modal-box').length) {
-            $('body').removeClass('modal-active');
-            $('.modal').removeClass('show');
-        }
-    });
+        $(this).parent().siblings().find('[data-tab]').removeClass('active');
+        $("#"+tab_id).siblings().removeClass('active');
+
+        $(this).addClass('active');
+        $("#"+tab_id).addClass('active');
+    })
+    $('#'+$('[data-tab].active').data('tab')).addClass('active');
+}
+
+// export const SwiperSlider = () => {
+//     var swiper = new Swiper('.future-carousel', {
+//         pagination: {
+//           el: ".swiper-pagination",
+//         },
+//     });
+// }
+
+export const CustomScroll = () => {
+    $(".content").mCustomScrollbar();
 }

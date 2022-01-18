@@ -7,6 +7,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: -20px -12px;
+    padding-right: 10px;
 
     li {
         width: 33.33%;
@@ -20,14 +21,6 @@
 
             .card {
                 box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-
-                .wrap {
-                    transform: scale(1.05);
-                }
-
-                &.more .wrap {
-                    transform: none;
-                }
             }
         }
     }
@@ -52,6 +45,9 @@
         display: block;
         color: color(gray,5);
         font-weight: 600;
+        font-size: 20px;
+        line-height: 0.9;
+        letter-spacing: -0.5px;
     }
 }
 
@@ -80,40 +76,16 @@
         }
     }
 
-    &.p1 .wrap:before {
-        background-image: url('#{$image-path}/pattern-1.svg');
-    }
+    .pattern {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
 
-    &.p2 .wrap:before {
-        background-image: url('#{$image-path}/pattern-2.svg');
-    }
-
-    &.p3 .wrap:before {
-        background-image: url('#{$image-path}/pattern-3.svg');
-    }
-
-    &.p4 .wrap:before {
-        background-image: url('#{$image-path}/pattern-4.svg');
-    }
-
-    &.p5 .wrap:before {
-        background-image: url('#{$image-path}/pattern-5.svg');
-    }
-
-    &.p6 .wrap:before {
-        background-image: url('#{$image-path}/pattern-6.svg');
-    }
-
-    &.p7 .wrap:before {
-        background-image: url('#{$image-path}/pattern-7.svg');
-    }
-
-    &.p8 .wrap:before {
-        background-image: url('#{$image-path}/pattern-8.svg');
-    }
-
-    &.p9 .wrap:before {
-        background-image: url('#{$image-path}/pattern-9.svg');
+        img {
+            width: 100%;
+        }
     }
 
     &.orange {
@@ -137,13 +109,16 @@
     }
 
     .logo {
-        @include box-align(vhc);
+        @include box-align(vc);
+        left: 0;
+        right: 0;
+        text-align: center;
     }
 
     .text {
         position: absolute;
-        right: 20px;
-        bottom: 20px;
+        right: 17px;
+        bottom: 15px;
         max-width: 200px;
         padding-right: 34px;
         font-size: 20px;
@@ -155,9 +130,9 @@
         &:after {
             content: "\e916";
             position: absolute;
-            right: 0;
-            bottom: 0;
-            font: 16px/1 "icomoon";
+            right: 2px;
+            bottom: 4px;
+            font: 14px/1 "icomoon";
         }
     }
 }

@@ -3,6 +3,9 @@
 // ---------------------------------------------------------===
 
 .future-carousel {
+    overflow: hidden;
+    color: color(black,1);
+    font: 500 16px/1.125 $national;
 
     .img {
         position: relative;
@@ -22,11 +25,38 @@
         z-index: 2;
         display: flex;
         align-items: flex-end;
-        padding: 101px 0 46px;
-        font: 16px/1.125 $national;
+        padding: 112px 0 45px;
 
-        .container {
+        > .container {
             width: 100%;
+            max-width: 1412px;
+            position: relative;
         }
+    }
+
+    .logo-wrap.container {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    .logo {
+        max-width: 200px;
+    }
+
+    .title {
+        display: block;
+        margin-bottom: 8px;
+        font: 500 40px/1.1425 $national_condensed
+    }
+
+    .text-wrap {
+        max-width: 381px;
+    }
+
+    p {
+        margin-bottom: 14px;
     }
 }

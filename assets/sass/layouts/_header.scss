@@ -2,9 +2,39 @@
 // Header styles
 // ---------------------------------------------------------===
 
+.hello-bar {
+    background: color(orange,1);
+    padding: 20px 0;
+    color: color(white,1);
+    font-size: 18px;
+    line-height: 1.389;
+    font-weight: 300;
+
+    .container {
+        position: relative;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .close {
+        @include box-align(vc);
+        right: 20px;
+        color: color(white,1);
+        width: 16px;
+        height: 16px;
+
+        &:hover {
+            color: color(blue,1);
+        }
+    }
+}
+
 #header {
     padding: 40px 0;
     position: relative;
+    z-index: 9998;
 
     &:after {
         @include box-align(hc);
@@ -28,7 +58,7 @@
         @include box-align(vc);
         right: 20px;
         color: color(black,2);
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .logo {
@@ -72,4 +102,84 @@
     a {
         color: color(black,2);
     }
+}
+
+.dropdown {
+    background: color(black,2);
+    padding: 40px 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+
+    &:before,
+    &:after {
+        content: "";
+        background: color(black,2);
+        position: absolute;
+        right: 100%;
+        left: -9999px;
+        top: 0;
+        bottom: 0;
+    }
+
+    &:after {
+        right: -9999px;
+        left: 100%;
+    }
+
+    .wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .drop-intro {
+        width: 284px;
+        color: color(gray,5);
+        padding-right: 30px;
+
+        .title {
+            display: block;
+            color: color(white,1);
+            font-size: 44px;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+    }
+
+    .drop-list-wrap {
+        flex: 1;
+        max-width: 936px;
+    }
+
+    .drop-list {
+        @extend %listreset;
+        margin: -40px -25px;
+        padding-bottom: 72px;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 21px;
+        line-height: 1.19;
+        font-weight: 700;
+
+        li {
+            width: 25%;
+            padding: 40px 25px;
+
+            a {
+                color: color(white,1);
+
+                &:hover {
+                    color: color(blue,1);
+                }
+            }
+        }
+    }
+}
+
+.longEnough {
+  max-height: 220px;
+  width: 350px;
+  overflow: auto;
 }

@@ -45,10 +45,11 @@ $font-path: '#{$dir}/fonts';
 $image-path: '#{$dir}/images';
 
 $helvetica: 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+$base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+$base-font-sans-serif: $helvetica;
 $ProximaNova: 'Proxima Nova',$helvetica;
 $national: 'national-2', sans-serif;
-$base-font-sans-serif: $helvetica;
-$base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+$national_condensed: 'national-2-condensed', sans-serif;
 
 // Body
 $base-text-color: color(black,2) !default;
@@ -99,6 +100,6 @@ $niceCheckRadio: false;
 $usegrid: true;
 $grid-count: 12;
 $grid-gutter: 40px;
-$container-width: 1418px;
+$container-width: 1414px;
 // $grid-gutter-mobile: 20px;  // Define if the mobile gutter is different
 // $container-gutter: 40px; // Define if the container gutter is different than grid gutter
