@@ -1,0 +1,314 @@
+// ---------------------------------------------------------===
+// Builder styles
+// ---------------------------------------------------------===
+
+.builder-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .column {
+        width: 20%;
+
+        @include media('<widescreen') {
+            width: 25%;
+        }
+
+        @include media('<desktop') {
+            width: 33.333%;
+        }
+
+        @include media('<tablet') {
+            width: 50%;
+        }
+
+        &.large {
+            width: 60%;
+
+            @include media('<widescreen') {
+                width: 75%;
+            }
+
+            @include media('<desktop') {
+                width: 66.666%;
+            }
+
+            @include media('<tablet') {
+                width: 100%;
+            }
+        }
+
+        &.small {
+            width: 40%;
+
+            @include media('<widescreen') {
+                width: 75%;
+            }
+
+            @include media('<desktop') {
+                width: 66.666%;
+            }
+
+            @include media('<tablet') {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.builder {
+    border: 1px solid color(black,2);
+    margin: -1px 0 0 -1px;
+    @include animate(background);
+
+    .builder-logo {
+        height: 184px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 10px 10px;
+
+        @include media('<desktop') {
+            height: 120px;
+            padding-top: 16px;
+        }
+
+        span {
+            @include media('<desktop') {
+                transform: scale(0.8, 0.8);
+            }
+        }
+    }
+
+    .builder-title {
+        display: block;
+        color: color(white);
+        background: color(black,2);
+        text-align: center;
+        padding: 8px 15px 7px;
+        font-size: 20px;
+        margin: 0 -1px;
+
+        @include media('<widescreen') {
+            font-size: 16px;
+            padding: 5px 10px 6px;
+        }
+    }
+
+    &.style-01 {
+        border: 1px solid color(gray,5);
+
+        .builder-logo {
+            height: 223px;
+            padding-top: 10px;
+
+            @include media('<desktop') {
+                height: 150px;
+            }
+        }
+    }
+
+    .fill-current {
+        @include animate(fill);
+    }
+
+    &:hover {
+        background: color(blue,1);
+
+        .fill-current {
+            * {
+                fill: color(white);
+            }
+        }
+    }
+}
+
+.box {
+    background: color(purple,2);
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    font-size: 30px;
+    line-height: 1.2333;
+    letter-spacing: -1px;
+    color: color(white);
+    min-height: 449px;
+    font-weight: 300;
+    margin: -1px 0 0 -1px;
+    padding: 36px 32px;
+
+    @include media('<widescreen') {
+        min-height: 432px;
+    }
+
+    @include media('<desktop') {
+        font-size: 17px;
+        line-height: 1.2353;
+        min-height: 304px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    @include media('<tablet') {
+        padding: 21px 23px 145px;
+    }
+
+    .inner {
+        max-width: 550px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .logo {
+        margin-bottom: 16px;
+
+        @include media('<tablet') {
+            margin-bottom: 22px;
+        }
+    }
+
+    p {
+        margin-bottom: 11px;
+
+        @include media('<desktop') {
+            margin-bottom: 23px;
+        }
+    }
+
+    .bg-img {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &.red {
+        background: color(red,2);
+    }
+}
+
+.more {
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-weight: 700;
+    color: color(white);
+
+    &:after {
+        content: "\e915";
+        font-family: 'icomoon';
+        font-weight: 400;
+        font-size: 14px;
+        margin-left: 11px;
+        vertical-align: middle;
+    }
+}
+
+.small-box {
+    background: color(blue,2);
+    color: color(white);
+    padding: 20px 15px 25px;
+    font-weight: 300;
+    text-align: center;
+    min-height: 225px;
+    margin: -1px 0 0 -1px;
+    display: flex;
+    font-size: 20px;
+    line-height: 24px;
+    align-items: center;
+
+    @include media('<widescreen') {
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 10px;
+    }
+
+    @include media('<desktop') {
+        min-height: 152px;
+    }
+
+    @include media('<tablet') {
+        padding: 40px 10px;
+    }
+
+    .count {
+        font-size: 64px;
+        font-weight: 800;
+        max-width: 198px;
+        flex: 0 0 198px;
+        padding-right: 10px;
+        text-align: right;
+
+        @include media('<widescreen') {
+            font-size: 44px;
+        }
+
+        @include media('<desktop') {
+            text-align: right;
+            max-width: 150px;
+            flex: 0 0 150px;
+        }
+
+        @include media('<tablet') {
+            max-width: 158px;
+            flex: 0 0 158px;
+        }
+
+        @include media('<414px') {
+            max-width: 100px;
+            flex: 0 0 100px;
+            font-size: 30px;
+        }
+
+        span {
+            font-weight: 300;
+            padding-right: 12px;
+        }
+    }
+
+    p {
+        letter-spacing: -0.5px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    .description {
+        flex: 1;
+    }
+
+    &.orange {
+        background: color(orange);
+    }
+}
+
+.w1 {
+    overflow: hidden;
+}
+
+.builders-page {
+    padding-top: 169px;
+
+    @include media('<desktop') {
+        padding-top: 58px;
+    }
+
+    h1 {
+        color: color(black,2);
+        margin-bottom: 23px;
+
+        @include media('<desktop') {
+            font-size: 48px;
+            padding: 0 22px;
+        }
+
+        @include media('<tablet') {
+            padding: 0;
+            margin-bottom: 16px;
+        }
+    }
+}

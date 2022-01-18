@@ -1,0 +1,223 @@
+// ---------------------------------------------------------===
+// Search styles
+// ---------------------------------------------------------===
+
+.builders-search-form {
+    margin-bottom: 40px;
+
+    @include media('<desktop') {
+        margin-bottom: 20px;
+    }
+
+    .row {
+        margin: 0;
+
+        @include media('<desktop') {
+            flex-direction: column;
+            padding: 0 22px;
+        }
+
+        @include media('<tablet') {
+            padding: 0;
+        }
+    }
+
+    .nice-select {
+        position: relative;
+        font-size: 12px;
+        color: color(gray, 5);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+
+        a {
+            color: color(gray, 5);
+        }
+
+        [data-select] {
+            border: 1px solid color(gray,5);
+            height: 40px;
+            display: block;
+            color: color(gray, 5);
+            padding: 12px 52px 12px 15px;
+            position: relative;
+
+            &:before {
+                position: absolute;
+                right: -1px;
+                top: -1px;
+                bottom: -1px;
+                width: 42px;
+                background: color(blue,1);
+                content: '';
+
+                @include media('<desktop') {
+                    width: 40px;
+                }
+            }
+
+            &:after {
+                font-family: 'icomoon';
+                content: '\e917';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 8px;
+                color: color(white);
+                font-size: 12px;
+                font-weight: 400;
+                @include animate(transform);
+            }
+
+            &.active {
+                &:after {
+                    transform: translateY(-50%) rotate(180deg);
+                }
+            }
+        }
+
+        ul {
+            @extend %listreset;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: color(white);
+            padding: 10px 0;
+            border: 1px solid color(gray,5);
+            border-top: none;
+            z-index: 1;
+
+            a {
+                display: block;
+                padding: 8px 15px;
+            }
+        }
+    }
+
+    .select-holder {
+        max-width: 39.8%;
+        flex: 0 0 39.8%;
+        display: flex;
+
+        @include media('<widescreen') {
+            max-width: 45%;
+            flex: 0 0 45%;
+        }
+
+        @include media('<desktop') {
+            flex: 0 0 100%;
+            max-width: none;
+            margin: 0 -5px;
+        }
+
+        @include media('<tablet') {
+            display: block;
+            margin-bottom: 33px;
+        }
+    }
+
+    .select-col {
+        max-width: 50%;
+        flex: 0 0 50%;
+        padding-right: 42px;
+
+        @include media('<desktop') {
+            padding: 0 5px 29px;
+        }
+
+        @include media('<tablet') {
+            max-width: none;
+            padding: 0 0 20px;
+        }
+    }
+
+    .search-col {
+        flex: 1;
+
+        @include media('<desktop') {
+            order: -1;
+            margin-bottom: 22px;
+        }
+
+        @include media('<tablet') {
+            margin-bottom: 19px;
+        }
+    }
+
+    .button-col {
+        max-width: 260px;
+        flex: 0 0 260px;
+        padding-left: 42px;
+
+        @include media('<desktop') {
+            padding-left: 0;
+            flex: 0 0 100%;
+            max-width: none;
+            text-align: center;
+        }
+    }
+
+    .button {
+        &.button-lg {
+            width: 100%;
+
+            @include media('<desktop') {
+                width: auto;
+                padding: 13px 12px;
+            }
+        }
+    }
+}
+
+.search-field {
+    position: relative;
+
+    input[type='search'] {
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid color(gray,5);
+        padding-left: 34px;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: color(gray,3);
+        font-weight: 700;
+        outline: none;
+        height: 40px;
+        width: 100%;
+
+        @include placeholder {
+            color: color(gray,3);
+        }
+
+        @include media('<desktop') {
+            padding-left: 23px;
+        }
+    }
+
+    .icon-search {
+        position: absolute;
+        left: 1px;
+        top: 8px;
+        line-height: 1;
+        color: color(blue,1);
+        font-size: 24px;
+
+        @include media('<desktop') {
+            left: 0;
+            top: 13px;
+            font-size: 13px;
+        }
+    }
+
+    button {
+        background: color(white);
+        color: color(blue, 3);
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: inline-block;
+        vertical-align: top;
+        padding: 12px 22px;
+        letter-spacing: -1px;
+    }
+}

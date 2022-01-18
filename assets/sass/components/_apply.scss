@@ -1,0 +1,149 @@
+// ---------------------------------------------------------===
+// Apply styles
+// ---------------------------------------------------------===
+
+.apply-section {
+    padding: 37px 0 42px;
+
+    @include media('<desktop') {
+        padding: 31px 0 33px;
+    }
+
+    @include media('<tablet') {
+        padding: 25px 0;
+    }
+
+    .apply-box {
+        background: color(blue,3);
+        color: color(white);
+        padding: 64px 97px 58px;
+        font-size: 30px;
+        line-height: 1.2333;
+        font-weight: 300;
+        position: relative;
+        overflow: hidden;
+
+        @include media('<widescreen') {
+            padding: 64px 63px 47px 30px;
+        }
+
+        @include media('<desktop') {
+            font-size: 18px;
+            line-height: 1.1717;
+        }
+
+        @include media('<tablet') {
+            padding: 64px 15px 58px;
+        }
+    }
+
+    .inner {
+        max-width: 600px;
+        position: relative;
+        z-index: 1;
+
+        @include media('<desktop') {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        @include media('<tablet') {
+            text-align: center;
+            display: block;
+        }
+    }
+
+    .bg-image {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        top: 0;
+    }
+
+    h3 {
+        font-size: 48px;
+        line-height: 52px;
+        margin-bottom: 11px;
+
+        @include media('<desktop') {
+            font-size: 28px;
+            line-height: 1;
+            margin-bottom: 21px;
+        }
+    }
+
+    p {
+        margin-bottom: 20px;
+        letter-spacing: -1px;
+    }
+
+    .button {
+        margin-top: 22px;
+
+        @include media('<desktop') {
+            margin: 0 0 24px 38px;
+            max-width: 128px;
+            flex: 0 0 128px;
+            padding-top: 13px;
+            padding-bottom: 13px;
+        }
+
+        @include media('<tablet') {
+            max-width: none;
+            margin: 0;
+        }
+
+        &:hover {
+            background: darken(color(blue,3), 10);
+        }
+    }
+}
+
+.button {
+    background: color(white);
+    color: color(blue,3);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: top;
+    padding: 12px 22px;
+    letter-spacing: -1px;
+    outline: none;
+    border: none;
+    border-radius: 0;
+
+    &:hover {
+        background: darken(color(blue,3), 10);
+    }
+
+    &.button-blue {
+        background:color(blue,1);
+        color: color(white,1);
+    }
+
+    &.button-lg {
+        font-size: 16px;
+        letter-spacing: 0;
+        padding: 10px 15px;
+        letter-spacing: -0.5px;
+    }
+}
+
+.bottom-text {
+    font-size: 16px;
+    line-height: 1.25;
+    padding: 38px 0;
+    font-style: italic;
+    margin-bottom: 102px;
+
+    @include media('<desktop') {
+        padding-bottom: 35px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    a  {
+        font-style: normal;
+    }
+}

@@ -1,4 +1,5 @@
 import '../global.js'
+import '../plugins/masonry'
 import slick from 'slick-carousel'
 
 
@@ -115,5 +116,54 @@ export const Tabs = () => {
 export const Slider = () => {
     $('.future-carousel').slick({
         dots: true,
+    });
+}
+
+export const Masonry = () => {
+    jQuery(window).on('load masonry/refresh', function() {
+        jQuery('.js-masonry').masonry({
+            itemSelector: '.grid-item',
+            resize: true,
+            isOriginLeft: true,
+        });
+    });
+}
+
+export const initInlineSVG = () => {
+    $('.inline-svg').each(function () {
+        var img = $(this);
+        if (img.length > 0) {
+            $.get(img[0].src, function (svgDoc) {
+                var importedSVGRootElement = document.importNode(svgDoc.documentElement, true);
+                if (img.hasClass('no-fill')) {
+                    img.parent().html(importedSVGRootElement);
+                } else {
+                    img.parent().html(importedSVGRootElement).find('svg').addClass('fill-current');
+                }
+            });
+        }
+    });
+}
+
+export const Modal = () => {
+    $('[data-modal]').on('click', function() {
+        $('body').addClass('modal-active');
+        $('.modal').removeClass('show');
+        $($(this).attr('href')).addClass('show');
+        return false;
+    });
+
+    jQuery('.modal .close').click(function(e) {
+        e.preventDefault();
+        $('body').removeClass('modal-active');
+        $('.modal').removeClass('show');
+    });
+
+    jQuery('html').on('click touchstart pointerdown MSPointerDown', function(e) {
+        var target = jQuery(e.target);
+        if(!target.closest('.modal-box').length) {
+            $('body').removeClass('modal-active');
+            $('.modal').removeClass('show');
+        }
     });
 }

@@ -8,4 +8,7 @@ $(document).ready(function($){
     Helper.OpenClose();
     Helper.Tabs();
     Helper.Slider();
+    Helper.Masonry();
+    Helper.initInlineSVG();
+    Helper.Modal();
 });
