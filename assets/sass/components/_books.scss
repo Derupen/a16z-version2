@@ -7,28 +7,58 @@
 
 	h2 {
 		color: color(orange,1);
+		margin-bottom: 58px;
 	}
 
 	.row {
 		display: flex;
 		flex-wrap: wrap;
-		margin: -23px -124px;
+		margin: -50px -75px;
 
 		.col {
 			width: 50%;
-			padding: 23px 124px;
+			padding: 50px 75px;
 			display: flex;
 			flex-wrap: wrap;
+		}
+
+		a {
+			display: flex;
+			flex-wrap: wrap;
+			color: color(black,2);
+
+			&:hover {
+
+				.link {
+					color: color(green,1);
+				}
+
+				.book {
+					filter: drop-shadow(-10px 10px 15px rgba(color(black,1), 0.65));
+
+					img {
+						transform: translateY(-6px);
+					}
+				}
+			}
 		}
 	}
 
 	.book {
-		width: 266px;
-		margin-left: -40px;
+		@include animate(all);
+		position: relative;
+		width: 216px;
+		filter: drop-shadow(-10px 10px 15px rgba(color(black,1), 0.5));
+
+		img {
+			@include animate(all);
+			position: relative;
+			width: 100%;
+		}
 	}
 
 	.desc {
-		padding-left: 20px;
+		padding-left: 30px;
 		flex: 1;
 	}
 

@@ -1,5 +1,9 @@
-import '../global.js'
-import slick from 'slick-carousel'
+import '../global.js';
+// import '../plugins/swiper.js';
+// import Swiper from 'swiper'
+import 'swiper/swiper-bundle.css';
+import mCustomScrollbar from 'malihu-custom-scrollbar-plugin';
+import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css';
 
 
 export const MobileNav = () => {
@@ -112,8 +116,14 @@ export const Tabs = () => {
     $('#'+$('[data-tab].active').data('tab')).addClass('active');
 }
 
-export const Slider = () => {
-    $('.future-carousel').slick({
-        dots: true,
-    });
+// export const SwiperSlider = () => {
+//     var swiper = new Swiper('.future-carousel', {
+//         pagination: {
+//           el: ".swiper-pagination",
+//         },
+//     });
+// }
+
+export const CustomScroll = () => {
+    $(".content").mCustomScrollbar();
 }

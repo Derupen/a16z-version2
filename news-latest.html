@@ -10,11 +10,17 @@
 <body>
     <div id="wrapper">
         <div class="w1">
+            <div class="hello-bar">
+                <div class="container">
+                    <p><strong>Hello Bar Annnouncement:</strong> <span> Register today for a16z Summit 2021</span></p>
+                    <a href="#" class="icon-close close"></a>
+                </div>
+            </div>
             <header id="header">
                 <div class="container">
                     <div class="logo">
                         <a href="#">
-                            <img src="assets/images/logo.svg" width="215" alt="andreessen horowitz">
+                            <img src="assets/images/uploads/logo.svg" width="215" alt="andreessen horowitz">
                         </a>
                     </div>
                     <a href="#" class="nav-opener">
@@ -25,7 +31,34 @@
                             <ul>
                                 <li><a href="#">Portfolio</a></li>
                                 <li><a href="#">Team</a></li>
-                                <li><a href="#">Focus Areas</a></li>
+                                <li>
+                                    <a href="#">Focus Areas</a>
+                                    <div class="dropdown">
+                                        <div class="container">
+                                            <div class="wrap">
+                                                <div class="drop-intro">
+                                                    <strong class="title">Focus Areas</strong>
+                                                    <p>Short page description tied to activated hover here that will only be a few lines in length.</p>
+                                                </div>
+                                                <div class="drop-list-wrap">
+                                                    <ul class="drop-list">
+                                                        <li><a href="#">Bio + Health</a></li>
+                                                        <li><a href="#">Growth</a></li>
+                                                        <li><a href="#">Fintech</a></li>
+                                                        <li><a href="#">Games</a></li>
+                                                        <li><a href="#">Crypto</a></li>
+                                                        <li><a href="#">Consumer</a></li>
+                                                        <li><a href="#">Talent X  Opportunity</a></li>
+                                                        <li><a href="#">Seed</a></li>
+                                                        <li><a href="#">Enterprise</a></li>
+                                                        <li><a href="#">Cultural Leadership Fund</a></li>
+                                                        <li><a href="#">American Dynamism</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </nav>
                         <div class="search-nav">
@@ -36,18 +69,57 @@
             </header>
 
             <div class="future-carousel">
-                <div class="slide">
-                    <div class="img">
-                        <img src="assets/images/future-img1.png" alt="">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="img">
+                            <img src="assets/images/uploads/future-img1.png" alt="">
+                        </div>
+                        <div class="slide-content">
+                            <div class="logo-wrap container">
+                                <img src="assets/images/uploads/logo-big-question.svg" width="192" alt="">
+                            </div>
+                            <div class="container">
+                                <div class="desc">
+                                    <strong class="title">21 Experts on the Future of Expertise</strong>
+                                    <div class="text-wrap">
+                                        <p>How is expertise being redefined in the modern era?  We’re witnessing either a golden age of expertise  or an unmitigated crisis.</p>
+
+                                        <a href="#" class="btn btn-black">Read More</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
                     </div>
-                    <div class="slide-content">
-                        <div class="container">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Voluptatum optio consectetur ut obcaecati corporis facilis voluptatibus aliquid, amet iure excepturi perspiciatis voluptate magni ad? Praesentium facere tempore assumenda distinctio, perferendis.
+                    <div class="swiper-slide">
+                        <div class="img">
+                            <img src="assets/images/uploads/future-img1.png" alt="">
+                        </div>
+                        <div class="slide-content">
+                            <div class="logo-wrap container">
+                                <img src="assets/images/uploads/logo-big-question.svg" width="192" alt="">
+                            </div>
+                            <div class="container">
+                                <div class="desc">
+                                    <strong class="title">21 Experts on the Future of Expertise</strong>
+                                    <div class="text-wrap">
+                                        <p>How is expertise being redefined in the modern era?  We’re witnessing either a golden age of expertise  or an unmitigated crisis.</p>
+
+                                        <a href="#" class="btn btn-black">Read More</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
 
+            <!-- <div class="longEnough mCustomScrollbar" data-mcs-theme="dark">
+                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse paincs.</p>
+            </div>
+ -->
             <section class="news-latest">
                 <div class="container">
                     <h2>Latest</h2>
@@ -57,7 +129,7 @@
                                 <li>
                                     <div class="heading">
                                         <h6>
-                                            <a href="#">Episode Title lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque <i class="icon-future"></i></a>
+                                            <a href="#"><span>Episode Title lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque</span> <i class="icon-future"></i></a>
                                         </h6>
                                         <span class="author"><i class="icon-headphone"></i>Firstname Lastname, Firstname Lastname</span>
                                     </div>
@@ -66,7 +138,7 @@
                                 <li>
                                     <div class="heading">
                                         <h6>
-                                            <a href="#">Article lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque</a>
+                                            <a href="#"><span>Article lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque</span></a>
                                         </h6>
                                         <span class="author">Firstname Lastname, Firstname Lastname</span>
                                     </div>
@@ -75,7 +147,7 @@
                                 <li>
                                     <div class="heading">
                                         <h6>
-                                            <a href="#">Article lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque <i class="icon-future"></i></a>
+                                            <a href="#"><span>Article lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque</span> <i class="icon-future"></i></a>
                                         </h6>
                                         <span class="author">Firstname Lastname, Firstname Lastname</span>
                                     </div>
@@ -84,7 +156,7 @@
                                 <li>
                                     <div class="heading">
                                         <h6>
-                                            <a href="#">Episode Title lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque <i class="icon-future"></i></a>
+                                            <a href="#"><span>Episode Title lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque</span> <i class="icon-future"></i></a>
                                         </h6>
                                         <span class="author"><i class="icon-headphone"></i>Firstname Lastname, Firstname Lastname</span>
                                     </div>
@@ -93,7 +165,7 @@
                                 <li>
                                     <div class="heading">
                                         <h6>
-                                            <a href="#">Article lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque <i class="icon-future"></i></a>
+                                            <a href="#"><span>Article lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque</span> <i class="icon-future"></i></a>
                                         </h6>
                                         <span class="author">Firstname Lastname, Firstname Lastname</span>
                                     </div>
@@ -102,7 +174,7 @@
                                 <li>
                                     <div class="heading">
                                         <h6>
-                                            <a href="#">Episode Title lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque</a>
+                                            <a href="#"><span>Episode Title lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque</span></a>
                                         </h6>
                                         <span class="author"><i class="icon-headphone"></i>Firstname Lastname, Firstname Lastname</span>
                                     </div>
@@ -111,7 +183,7 @@
                                 <li>
                                     <div class="heading">
                                         <h6>
-                                            <a href="#">Article lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque <i class="icon-future"></i></a>
+                                            <a href="#"><span>Article lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque</span> <i class="icon-future"></i></a>
                                         </h6>
                                         <span class="author">Firstname Lastname, Firstname Lastname</span>
                                     </div>
@@ -121,7 +193,7 @@
                             <a href="#" class="link">Load More</a>
                         </div>
                         <aside class="aside">
-                            <h6>a16z on Twitter</h6>
+                            <h6>a16z ON TWITTER</h6>
                         </aside>
                     </div>
                     <div class="content-holder">
@@ -132,8 +204,11 @@
                                     <a href="#">
                                         <div class="card orange p1">
                                             <div class="wrap">
+                                                <div class="pattern">
+                                                    <img src="/assets/images/pattern-1.svg" alt="">
+                                                </div>
                                                 <div class="logo">
-                                                    <img src="assets/images/logo-acme-co.png" width="193" alt="">
+                                                    <img src="assets/images/uploads/logo-acme-co.png" width="193" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -144,10 +219,13 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <div class="card blue p2">
+                                        <div class="card blue">
                                             <div class="wrap">
+                                                <div class="pattern">
+                                                    <img src="/assets/images/pattern-2.svg" alt="">
+                                                </div>
                                                 <div class="logo">
-                                                    <img src="assets/images/logo-acme-co-1.png" width="66" alt="">
+                                                    <img src="assets/images/uploads/logo-acme-co-1.png" width="66" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -158,10 +236,13 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <div class="card green p3">
+                                        <div class="card green">
                                             <div class="wrap">
+                                                <div class="pattern">
+                                                    <img src="/assets/images/pattern-3.svg" alt="">
+                                                </div>
                                                 <div class="logo">
-                                                    <img src="assets/images/logo-acme-co-2.png" width="149" alt="">
+                                                    <img src="assets/images/uploads/logo-acme-co-2.png" width="149" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -172,10 +253,13 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <div class="card dark-blue p4">
+                                        <div class="card dark-blue">
                                             <div class="wrap">
+                                                <div class="pattern">
+                                                    <img src="/assets/images/pattern-4.svg" alt="">
+                                                </div>
                                                 <div class="logo">
-                                                    <img src="assets/images/logo-acme-co.png" width="193" alt="">
+                                                    <img src="assets/images/uploads/logo-acme-co.png" width="193" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -186,10 +270,13 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <div class="card orange p5">
+                                        <div class="card orange">
                                             <div class="wrap">
+                                                <div class="pattern">
+                                                    <img src="/assets/images/pattern-5.svg" alt="">
+                                                </div>
                                                 <div class="logo">
-                                                    <img src="assets/images/logo-acme-co-1.png" width="66" alt="">
+                                                    <img src="assets/images/uploads/logo-acme-co-1.png" width="66" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -200,10 +287,13 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <div class="card blue p6">
+                                        <div class="card blue">
                                             <div class="wrap">
+                                                <div class="pattern">
+                                                    <img src="/assets/images/pattern-6.svg" alt="">
+                                                </div>
                                                 <div class="logo">
-                                                    <img src="assets/images/logo-acme-co-2.png" width="149" alt="">
+                                                    <img src="assets/images/uploads/logo-acme-co-2.png" width="149" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -214,10 +304,13 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <div class="card green p7">
+                                        <div class="card green">
                                             <div class="wrap">
+                                                <div class="pattern">
+                                                    <img src="/assets/images/pattern-7.svg" alt="">
+                                                </div>
                                                 <div class="logo">
-                                                    <img src="assets/images/logo-acme-co.png" width="193" alt="">
+                                                    <img src="assets/images/uploads/logo-acme-co.png" width="193" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -228,10 +321,13 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <div class="card dark-blue p8">
+                                        <div class="card dark-blue">
                                             <div class="wrap">
+                                                <div class="pattern">
+                                                    <img src="/assets/images/pattern-8.svg" alt="">
+                                                </div>
                                                 <div class="logo">
-                                                    <img src="assets/images/logo-acme-co-1.png" width="66" alt="">
+                                                    <img src="assets/images/uploads/logo-acme-co-1.png" width="66" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -242,8 +338,11 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <div class="card more black p9">
+                                        <div class="card more black">
                                             <div class="wrap">
+                                                <div class="pattern">
+                                                    <img src="/assets/images/pattern-9.svg" alt="">
+                                                </div>
                                                 <div class="text">
                                                     Load More Recent  Announcements
                                                 </div>
@@ -253,8 +352,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <aside class="aside">
-                            <h6>upcoming events</h6>
+                        <aside class="aside upcoming-events">
+                            <h6>UPCOMING EVENTS</h6>
                             <ul class="events-list">
                                 <li>
                                     <div class="date">
@@ -309,12 +408,82 @@
 
             <section class="podcast-network">
                 <div class="container">
-                    <h2>a16z Podcast Network</h2>
-                    <ul>
-                        <li>
-                            
-                        </li>
-                    </ul>
+                    <h2>A16z Podcast Network</h2>
+                    
+                </div>
+                <div class="podcast-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="display: flex;">
+                            <div class="podcast-card">
+                                <div class="front">
+                                    <div class="img" style="background: url('assets/images/uploads/podcast-card-1.png');">
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="card-content">
+                                        <div class="top">
+                                            <strong class="title">a16z Live</strong>
+                                            <p>Conversations on Clubhouse and beyond — to capture and share many of the live discussions and events featuring, hosted, or co-hosted by a16z partners (with outside voices too).</p>
+                                        </div>
+                                        <div class="btm">
+                                            <a href="#" class="link">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="podcast-card">
+                                <div class="front">
+                                    <div class="img" style="background: url('assets/images/uploads/podcast-card-2.png');">
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="card-content">
+                                        <div class="top">
+                                            <strong class="title">a16z Live</strong>
+                                            <p>Conversations on Clubhouse and beyond — to capture and share many of the live discussions and events featuring, hosted, or co-hosted by a16z partners (with outside voices too).</p>
+                                        </div>
+                                        <div class="btm">
+                                            <a href="#" class="link">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="podcast-card">
+                                <div class="front">
+                                    <div class="img" style="background: url('assets/images/uploads/podcast-card-3.png');">
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="card-content">
+                                        <div class="top">
+                                            <strong class="title">a16z Live</strong>
+                                            <p>Conversations on Clubhouse and beyond — to capture and share many of the live discussions and events featuring, hosted, or co-hosted by a16z partners (with outside voices too).</p>
+                                        </div>
+                                        <div class="btm">
+                                            <a href="#" class="link">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="podcast-card">
+                                <div class="front">
+                                    <div class="img" style="background: url('assets/images/uploads/podcast-card-4.png');">
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="card-content">
+                                        <div class="top">
+                                            <strong class="title">a16z Live</strong>
+                                            <p>Conversations on Clubhouse and beyond — to capture and share many of the live discussions and events featuring, hosted, or co-hosted by a16z partners (with outside voices too).</p>
+                                        </div>
+                                        <div class="btm">
+                                            <a href="#" class="link">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -323,60 +492,68 @@
                     <h2>a16z Books</h2>
                     <div class="row">
                         <div class="col">
-                            <div class="book">
-                                <img src="assets/images/book-1.png" alt="">
-                            </div>
-                            <div class="desc">
-                                <h6>The Hard Thing About  Hard Things</h6>
-                                <span class="author">Ben Horowitz</span>
-                                <div class="text-wrap">
-                                    <p>Ben Horowitz, cofounder of Andreessen Horowitz and one of Silicon Valley’s most respected and experienced entrepreneurs, offers essential advice on building and running a startup — practical wisdom for managing the toughest problems business school doesn’t cover, based on his popular ben’s blog.</p>
-                                    <p>While many people talk about how great it is...</p>
+                            <a href="#">
+                                <div class="book">
+                                    <img src="assets/images/uploads/book-1.png" alt="">
                                 </div>
-                                <a href="#" class="link">Learn More</a>
-                            </div>
+                                <div class="desc">
+                                    <h6>The Hard Thing About  Hard Things</h6>
+                                    <span class="author">Ben Horowitz</span>
+                                    <div class="text-wrap">
+                                        <p>Ben Horowitz, cofounder of Andreessen Horowitz and one of Silicon Valley’s most respected and experienced entrepreneurs, offers essential advice on building and running a startup — practical wisdom for managing the toughest problems business school doesn’t cover, based on his popular ben’s blog.</p>
+                                        <p>While many people talk about how great it is...</p>
+                                    </div>
+                                    <span class="link">Learn More</span>
+                                </div>
+                            </a>
                         </div>
                         <div class="col">
-                            <div class="book">
-                                <img src="assets/images/book-2.png" alt="">
-                            </div>
-                            <div class="desc">
-                                <h6>What You Do is Who You Are</h6>
-                                <span class="author">Ben Horowitz</span>
-                                <div class="text-wrap">
-                                    <p>Ben Horowitz, cofounder of Andreessen Horowitz and one of Silicon Valley’s most respected and experienced entrepreneurs, offers essential advice on building and running a startup — practical wisdom for managing the toughest problems business school doesn’t cover, based on his popular ben’s blog.</p>
-                                    <p>While many people talk about how great it is...</p>
+                            <a href="#">
+                                <div class="book">
+                                    <img src="assets/images/uploads/book-2.png" alt="">
                                 </div>
-                                <a href="#" class="link">Learn More</a>
-                            </div>
+                                <div class="desc">
+                                    <h6>What You Do is Who You Are</h6>
+                                    <span class="author">Ben Horowitz</span>
+                                    <div class="text-wrap">
+                                        <p>Ben Horowitz, cofounder of Andreessen Horowitz and one of Silicon Valley’s most respected and experienced entrepreneurs, offers essential advice on building and running a startup — practical wisdom for managing the toughest problems business school doesn’t cover, based on his popular ben’s blog.</p>
+                                        <p>While many people talk about how great it is...</p>
+                                    </div>
+                                    <span class="link">Learn More</span>
+                                </div>
+                            </a>
                         </div>
                         <div class="col">
-                            <div class="book">
-                                <img src="assets/images/book-3.png" alt="">
-                            </div>
-                            <div class="desc">
-                                <h6>Secrets of Sand Hill Road</h6>
-                                <span class="author">Scott Kupor</span>
-                                <div class="text-wrap">
-                                    <p>Ben Horowitz, cofounder of Andreessen Horowitz and one of Silicon Valley’s most respected and experienced entrepreneurs, offers essential advice on building and running a startup — practical wisdom for managing the toughest problems business school doesn’t cover, based on his popular ben’s blog.</p>
-                                    <p>While many people talk about how great it is...</p>
+                            <a href="#">
+                                <div class="book">
+                                    <img src="assets/images/uploads/book-3.png" alt="">
                                 </div>
-                                <a href="#" class="link">Learn More</a>
-                            </div>
+                                <div class="desc">
+                                    <h6>Secrets of Sand Hill Road</h6>
+                                    <span class="author">Scott Kupor</span>
+                                    <div class="text-wrap">
+                                        <p>Ben Horowitz, cofounder of Andreessen Horowitz and one of Silicon Valley’s most respected and experienced entrepreneurs, offers essential advice on building and running a startup — practical wisdom for managing the toughest problems business school doesn’t cover, based on his popular ben’s blog.</p>
+                                        <p>While many people talk about how great it is...</p>
+                                    </div>
+                                    <span class="link">Learn More</span>
+                                </div>
+                            </a>
                         </div>
                         <div class="col">
-                            <div class="book">
-                                <img src="assets/images/book-4.png" alt="">
-                            </div>
-                            <div class="desc">
-                                <h6>The Cold Start Problem</h6>
-                                <span class="author">Andrew Chen</span>
-                                <div class="text-wrap">
-                                    <p>Ben Horowitz, cofounder of Andreessen Horowitz and one of Silicon Valley’s most respected and experienced entrepreneurs, offers essential advice on building and running a startup — practical wisdom for managing the toughest problems business school doesn’t cover, based on his popular ben’s blog.</p>
-                                    <p>While many people talk about how great it is...</p>
+                            <a href="#">
+                                <div class="book">
+                                    <img src="assets/images/uploads/book-4.png" alt="">
                                 </div>
-                                <a href="#" class="link">Learn More</a>
-                            </div>
+                                <div class="desc">
+                                    <h6>The Cold Start Problem</h6>
+                                    <span class="author">Andrew Chen</span>
+                                    <div class="text-wrap">
+                                        <p>Ben Horowitz, cofounder of Andreessen Horowitz and one of Silicon Valley’s most respected and experienced entrepreneurs, offers essential advice on building and running a startup — practical wisdom for managing the toughest problems business school doesn’t cover, based on his popular ben’s blog.</p>
+                                        <p>While many people talk about how great it is...</p>
+                                    </div>
+                                    <span class="link">Learn More</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -387,7 +564,7 @@
                 <div class="container">
                     <div class="logo">
                         <a href="#">
-                            <img src="assets/images/logo-gray.svg" width="145" alt="andreessen horowitz">
+                            <img src="assets/images/uploads/logo-gray.svg" width="145" alt="andreessen horowitz">
                         </a>
                     </div>
                     <div class="footer-content">

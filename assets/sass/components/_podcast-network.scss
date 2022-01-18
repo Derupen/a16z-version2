@@ -3,11 +3,80 @@
 // ---------------------------------------------------------===
 
 .podcast-network {
-	background: color(gray,1);
-	padding: 85px 0;
+    background: color(gray,1);
+    padding: 85px 0;
 
-	h2 {
-		color: color(orange,1);
-		margin-bottom: 52px;
-	}
+    h2 {
+        color: color(orange,1);
+        margin-bottom: 52px;
+    }
+}
+
+.podcast-card {
+    width: 412px;
+    height: 412px;
+    position: relative;
+
+    &:hover {
+
+        .front {
+            transform: perspective(1000px) rotateY(180deg);
+        }
+
+        .back{
+            transform: perspective(1000px) rotateY(0deg);
+            box-shadow: 0 0 20px 5px rgba(75, 79, 84, 0.2);
+        }
+    }
+
+    .front {
+        width: 100%;
+        padding-top: 100%;
+        position: relative;
+        backface-visibility: hidden;
+        transform: perspective(1000px) rotateY(0deg);
+        transition: 0.3s;
+        box-shadow: 0 0 20px 5px rgba(75, 79, 84, 0.2);
+    }
+
+    .img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .back {
+        position: absolute;
+        top: 0;   
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: color(white,1);
+        border: 3px solid color(orange,1);
+        padding: 30px 21px;
+        backface-visibility: hidden;
+        transform: perspective(1000px) rotateY(-180deg);
+        transition: 0.3s;
+    }
+
+    .card-content {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 22px;
+        line-height: 1.2727;
+        letter-spacing: -0.005em;
+
+        .title {
+            font-size: 32px;
+            line-height: 1;
+            font-weight: 800;
+            letter-spacing: 0;
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
 }

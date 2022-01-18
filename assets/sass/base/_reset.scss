@@ -42,9 +42,10 @@ img {
 
 // wrapper
 #wrapper {
-    position: relative;
-    display: table;
-    table-layout: fixed;
-    height: 100%;
-    width: 100%;
+    // position: relative;
+    // display: table;
+    // table-layout: fixed;
+    // height: 100%;
+    // width: 100%;
+    overflow: hidden;
 }
