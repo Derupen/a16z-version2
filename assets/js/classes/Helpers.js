@@ -1,7 +1,7 @@
 import '../global.js';
 import '../plugins/masonry'
 // import '../plugins/swiper.js';
-// import Swiper from 'swiper'
+import Swiper from 'swiper'
 import 'swiper/swiper-bundle.css';
 import mCustomScrollbar from 'malihu-custom-scrollbar-plugin';
 import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css';
@@ -143,14 +143,30 @@ export const Tabs = () => {
     $('#'+$('[data-tab].active').data('tab')).addClass('active');
 }
 
-// export const SwiperSlider = () => {
-//     var swiper = new Swiper('.future-carousel', {
-//         pagination: {
-//           el: ".swiper-pagination",
-//         },
-//     });
-// }
+export const SwiperSlider = () => {
+    var swiper = new Swiper('.future-carousel', {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+    });
+
+    var swiper = new Swiper('.podcast-slider', {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        loop:true,
+        centeredSlides: true,
+        autoplay: {
+          delay: 1000,
+          disableOnInteraction: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+    });
+}
 
 export const CustomScroll = () => {
-    $(".content").mCustomScrollbar();
+    $(".scroll-block").mCustomScrollbar();
 }

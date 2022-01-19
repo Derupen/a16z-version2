@@ -9,7 +9,7 @@ $(document).ready(function($){
     Helper.Tabs();
     Helper.Masonry();
     Helper.initInlineSVG();
-    // Helper.SwiperSlider();
+    Helper.SwiperSlider();
     Helper.CustomScroll();
 });
 
