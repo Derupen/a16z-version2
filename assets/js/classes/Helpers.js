@@ -168,5 +168,5 @@ export const SwiperSlider = () => {
 }
 
 export const CustomScroll = () => {
-    $(".scroll-block").mCustomScrollbar();
+    $(".s-content").mCustomScrollbar();
 }
