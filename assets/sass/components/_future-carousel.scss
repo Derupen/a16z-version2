@@ -6,6 +6,7 @@
     overflow: hidden;
     color: color(black,1);
     font: 500 16px/1.125 $national;
+    position: relative;
 
     .img {
         position: relative;
@@ -58,5 +59,28 @@
 
     p {
         margin-bottom: 14px;
+    }
+
+    .swiper-pagination {
+        max-width: 1412px;
+        padding: 0 20px;
+        right: 0;
+        text-align: right;
+        bottom: 28px;
+        margin: 0 auto;
+    }
+
+    .swiper-pagination-bullet {
+        @include animate(border background);
+        width: 20px;
+        height: 20px;
+        border: 1px solid color(white,1);
+        background: transparent;
+        opacity: 1;
+        margin: 0 0 0 11px !important;
+
+        &.swiper-pagination-bullet-active {
+            background: color(white,1);
+        }
     }
 }

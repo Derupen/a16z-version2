@@ -1,10 +1,9 @@
 import '../global.js';
 import '../plugins/masonry'
-// import '../plugins/swiper.js';
-import Swiper from 'swiper/bundle';
-import 'swiper/swiper-bundle.css';
-import mCustomScrollbar from 'malihu-custom-scrollbar-plugin';
-import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css';
+import Swiper from 'swiper/bundle'
+import 'swiper/swiper-bundle.css'
+import mCustomScrollbar from 'malihu-custom-scrollbar-plugin'
+import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css'
 
 
 export const MobileNav = () => {
@@ -153,13 +152,13 @@ export const SwiperSlider = () => {
 
     var swiper = new Swiper('.podcast-slider', {
         slidesPerView: "auto",
-        spaceBetween: 30,
+        spaceBetween: 77,
         loop:true,
         centeredSlides: true,
-        autoplay: {
-          delay: 1000,
-          disableOnInteraction: true,
-        },
+        // autoplay: {
+        //   delay: 1000,
+        //   disableOnInteraction: true,
+        // },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
@@ -168,5 +167,5 @@ export const SwiperSlider = () => {
 }
 
 export const CustomScroll = () => {
-    $(".scroll-block").mCustomScrollbar();
+    $(".s-content").mCustomScrollbar();
 }
