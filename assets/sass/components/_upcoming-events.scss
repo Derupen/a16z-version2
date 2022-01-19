@@ -6,6 +6,10 @@
     @extend %listreset;
     margin-bottom: 60px;
 
+    @include media('<tablet') {
+        padding: 0 16px;
+    }
+
     li {
         display: flex;
         flex-wrap: wrap;

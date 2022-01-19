@@ -151,14 +151,15 @@ export const SwiperSlider = () => {
     });
 
     var swiper = new Swiper('.podcast-slider', {
-        slidesPerView: "auto",
+        slidesPerView: "4",
         spaceBetween: 77,
         loop:true,
         centeredSlides: true,
-        // autoplay: {
-        //   delay: 1000,
-        //   disableOnInteraction: true,
-        // },
+        autoplay: {
+          delay: 1000,
+          disableOnInteraction: true,
+        },
+        speed: 6000,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,

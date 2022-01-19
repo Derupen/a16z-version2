@@ -20,12 +20,30 @@ h1, .h1 {
     font-size: $h1-font-size;
     line-height: 1;
     letter-spacing: -0.015em;
+
+    @include media('<desktop') {
+        font-size: 52px;
+    }
+
+    @include media('<tablet') {
+        font-size: 48px;
+        line-height: 1.041;
+    }
 }
 
 h2, .h2 {
     font-size: $h2-font-size;
     line-height: 1.2;
     letter-spacing: -0.015em;
+
+    @include media('<desktop') {
+        font-size: 48px;
+    }
+
+    @include media('<tablet') {
+        font-size: 42px;
+        line-height: 1.167;
+    }
 }
 
 h3, .h3 {
@@ -37,7 +55,12 @@ h3, .h3 {
 h4, .h4 {
     font-size: $h4-font-size;
     line-height: 0.778;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.5px;
+
+    @include media('<tablet') {
+        font-size: 28px;
+        line-height: 1;
+    }
 }
 
 h5, .h5 {

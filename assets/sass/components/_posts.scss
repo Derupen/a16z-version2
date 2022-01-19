@@ -7,8 +7,16 @@
     margin: -31px 0;
     padding-bottom: 54px;
 
+    @include media('<tablet') {
+        margin: -24px 0;
+    }
+
     li {
         padding: 31px 0;
+
+        @include media('<tablet') {
+            padding: 24px 0;
+        }
 
         + li {
             border-top: 1px solid color(gray,5);
@@ -17,16 +25,29 @@
 
     .heading {
         margin-bottom: 23px;
+
+        @include media('<tablet') {
+            margin: 0 0 11px;
+        }
     }
 
     h6 {
         display: block;
         margin-bottom: 7px;
 
+        @include media('<tablet') {
+            font-size: 20px;
+            margin-bottom: 9px;
+        }
+
         a {
             display: inline-flex;
             flex-wrap: wrap;
             color: color(black,2);
+
+            @include media('<tablet') {
+                font-weight: 700;
+            }
 
             &:hover {
                 color: color(blue,1);
@@ -40,31 +61,56 @@
                 margin: 9px 0 0 10px;
                 font-size: 14px;
                 color: color(gray,4);
+
+                @include media('<tablet') {
+                    font-size: 21px;
+                    margin: 1px 9px 0 26px;
+                }
             }
         }
     }
 
     .author {
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
         font-weight: 600;
         font-size: 20px;
         line-height: 1;
         letter-spacing: -0.5px;
         color: color(gray,5);
 
+        @include media('<tablet') {
+            font-size: 18px;
+        }
+
         i {
             margin: 2px 10px 0 0;
             font-size: 18px;
+
+            @include media('<tablet') {
+                margin: -1px 11px 0 0;
+            }
         }
     }
 
     p {
         margin: 0;
 
+        @include media('<tablet') {
+            display: none;
+        }
+
         + p {
             margin-top: 1em;
         }
+    }
+}
+
+.post-link-wrap {
+
+    @include media('<tablet') {
+        text-align: center;
+        border-top: 1px solid color(gray,5);
+        padding-top: 36px;
+        margin-top: -54px;
     }
 }

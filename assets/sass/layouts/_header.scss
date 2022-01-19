@@ -12,10 +12,13 @@
 
     .container {
         position: relative;
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     p {
         margin: 0;
+        padding-right: 40px;
     }
 
     .close {
@@ -36,6 +39,10 @@
     position: relative;
     z-index: 9998;
 
+    @include media('<desktop') {
+        padding: 25px 0;
+    }
+
     &:after {
         @include box-align(hc);
         content: "";
@@ -44,6 +51,12 @@
         width: 1682px;
         height: 185px;
         pointer-events: none;
+
+        @include media('<desktop') {
+            background-image: url('#{$image-path}/bg-nav-tablet.png');
+            width: 834px;
+            height: 75px;
+        }
     }
 
     > .container {
@@ -51,7 +64,9 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-        position: relative; 
+        position: relative;
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     .nav-opener {
@@ -59,10 +74,18 @@
         right: 20px;
         color: color(black,2);
         font-size: 16px;
+
+        @include media('<desktop') {
+            right: 24px;
+        }
     }
 
     .logo {
         width: 215px;
+
+        @include media('<desktop') {
+            width: 152px;
+        }
 
         a {
             display: block;
@@ -75,6 +98,10 @@
     flex-wrap: wrap;
     align-items: center;
     padding-right: 66px;
+
+    @include media('<desktop') {
+        display: none;
+    }
 }
 
 #nav {

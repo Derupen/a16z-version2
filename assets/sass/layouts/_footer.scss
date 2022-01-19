@@ -10,10 +10,20 @@
     .inner {
         background: color(black,2);
         padding: 53px 0 50px;
+
+        @include media('<desktop') {
+            padding: 37px 0;
+        }
+
+        @include media('<tablet') {
+            padding: 37px 0 24px;
+        }
     }
 
     .container {
         max-width: 1222px;
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     .logo {
@@ -24,14 +34,62 @@
         padding-top: 25px;
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
+        overflow: hidden;
+
+        @include media('<desktop') {
+            padding-top: 37px;
+        }
+
+        @include media('<tablet') {
+            padding-top: 39px;
+        }
     }
 
     .footer-nav {
         padding-left: 49px;
+
+        @include media('<desktop') {
+            width: calc(100% + 24px);
+            padding: 0 0 18px;
+            margin-bottom: 23px;
+            border-bottom: 1px solid color(white,1);
+            order: 1;
+        }
+
+        @include media('<desktop') {
+            display: block;
+        }
+
+        @include media('<tablet') {
+            padding-bottom: 10px;
+        }
+    }
+
+    .copyright {
+
+        @include media('<desktop') {
+            order: 2;
+        }
+
+        @include media('<tablet') {
+            order: 3;
+        }
     }
 
     .social-networks {
         padding-left: 63px;
+
+        @include media('<desktop') {
+            order: 3;
+            padding: 0 0 0 63px;
+        }
+
+        @include media('<tablet') {
+            order: 2;
+            padding: 0 0 24px;
+            width: 100%;
+        }
     }
 }
 
@@ -42,8 +100,16 @@
     align-items: center;
     margin: -5px -12px;
 
+    @include media('<tablet') {
+        margin: -12px;
+    }
+
     li {
         padding: 5px 12px;
+
+        @include media('<tablet') {
+            padding: 12px;
+        }
 
         a {
             color: color(white,1);
@@ -62,8 +128,17 @@
     align-items: center;
     margin: -5px -11px;
 
+    @include media('<desktop') {
+        margin: -5px -14px;
+        padding: 25px 0 0;
+    }
+
     li {
         padding: 5px 11px;
+
+        @include media('<tablet') {
+            padding: 5px 14px;
+        }
 
         a {
             display: block;

@@ -2,6 +2,14 @@
 // Common styles
 // ---------------------------------------------------------===
 
+.container {
+
+    @include media('>=tablet', '<desktop') {
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+}
+
 .link {
     display: inline-flex;
     align-items: center;
@@ -53,14 +61,34 @@
     font-size: 20px;
     line-height: 0.8;
     letter-spacing: -0.5px;
+
+    @include media('<tablet') {
+        font-size: 18px;
+    }
 }
 
-.news-latest {
+.content-wrapper {
     padding-top: 82px;
+
+    @include media('<desktop') {
+        padding-top: 27px;
+    }
+
+    @include media('<tablet') {
+        padding-top: 58px;
+    }
 
     h2 {
         color: color(orange,1);
         margin-bottom: 55px;
+
+        @include media('<desktop') {
+            margin-bottom: 16px;
+        }
+
+        @include media('<tablet') {
+            margin-bottom: 24px;
+        }
     }
 }
 
@@ -69,26 +97,55 @@
     display: flex;
     flex-wrap: wrap;
 
+    @include media('<desktop') {
+        display: block;
+    }
+
+    .block {
+
+        + .block {
+            margin-top: 90px;
+
+            @include media('<desktop') {
+                margin-top: 46px;
+            }
+        }
+    }
+
     .content {
         flex: 1;
         padding: 0 59px 100px 0;
+
+        @include media('<widescreen') {
+            padding-right: 40px;
+        }
+
+        @include media('<desktop') {
+            flex: none;
+            width: 100%;
+            padding: 0 0 40px;
+        }
+
+        @include media('<tablet') {
+            padding-bottom: 59px;
+        }
+    }
+}
+
+.pattern {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    img {
+        width: 100%;
     }
 
-    .aside {
-        width: 408px;
-        border-left: 1px solid color(gray,5);
-        padding: 0 0 100px 74px;
-
-        &.upcoming-events {
-            padding-top: 51px;
-        }
-
-        > h6 {
-            font-size: 20px;
-            line-height: 1.172;
-            letter-spacing: 2.5px;
-            margin-bottom: 53px;
-        }
+    svg {
+        width: 100%;
+        height: 100%;
     }
 }
 

@@ -1,0 +1,67 @@
+// ---------------------------------------------------------===
+// aside styles
+// ---------------------------------------------------------===
+
+.aside {
+    width: 408px;
+    border-left: 1px solid color(gray,5);
+    padding: 0 0 100px 70px;
+
+    @include media('<widescreen') {
+        width: 350px;
+        padding-left: 40px;
+    }
+
+    @include media('<desktop') {
+        width: 100%;
+        padding: 0 0 70px;
+        border: none;
+    }
+
+    .block {
+
+        + .block {
+            margin-top: 230px;
+
+            @include media('<desktop') {
+                margin-top: 46px;
+            }
+        }
+    }
+
+    > h6 {
+        font-size: 20px;
+        line-height: 1.172;
+        letter-spacing: 2.5px;
+        margin-bottom: 53px;
+
+        @include media('<tablet') {
+            margin-bottom: 35px;
+        }
+    }
+
+    &.tweets {
+
+        @include media('<desktop') {
+            display: none;
+        }
+    }
+
+    .book-order {
+        display: flex;
+        flex-wrap: wrap;
+
+        .book {
+            width: 170px;
+            filter: drop-shadow(-10px 10px 15px rgba(color(black,1), 0.5));
+        }
+
+        .desc {
+            flex: 1;
+            padding-left: 38px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+}
