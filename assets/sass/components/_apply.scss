@@ -120,6 +120,10 @@
     &.button-blue {
         background:color(blue,1);
         color: color(white,1);
+
+        &:hover {
+            background: color(orange);
+        }
     }
 
     &.button-lg {

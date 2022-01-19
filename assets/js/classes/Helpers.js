@@ -1,7 +1,7 @@
 import '../global.js';
 import '../plugins/masonry'
 // import '../plugins/swiper.js';
-import Swiper from 'swiper'
+import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
 import mCustomScrollbar from 'malihu-custom-scrollbar-plugin';
 import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css';
