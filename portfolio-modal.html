@@ -7,14 +7,14 @@
     <link rel="icon" href="assets/images/favicon.ico">
     <link rel="stylesheet" href="assets/compiled/css/app.css">
 </head>
-<body>
+<body class="modal-active">
     <div id="wrapper">
         <div class="w1">
             <header id="header">
                 <div class="container">
                     <div class="logo">
                         <a href="#">
-                            <img src="assets/images/logo.svg" width="215" alt="andreessen horowitz">
+                            <img src="assets/images/uploads/logo.svg" width="215" alt="andreessen horowitz">
                         </a>
                     </div>
                     <a href="#" class="nav-opener">
@@ -120,7 +120,7 @@
                             <div class="column grid-item large">
                                 <div class="box">
                                     <div class="inner">
-                                        <div class="logo"><img src="assets/images/uploads/logo.svg" alt="image description" width="121" height="84"></div>
+                                        <div class="logo"><img src="assets/images/uploads/logo08.svg" alt="image description" width="121" height="84"></div>
                                         <p>
                                             Success story here dolor sit amet, consectetur adipiscing. Donec et venenatis velit donec scelerisque leo eget turpis pel.
                                         </p>
@@ -944,7 +944,7 @@
                 <div class="container">
                     <div class="logo">
                         <a href="#">
-                            <img src="assets/images/logo-gray.svg" width="145" alt="andreessen horowitz">
+                            <img src="assets/images/uploads/logo-gray.svg" width="145" alt="andreessen horowitz">
                         </a>
                     </div>
                     <div class="footer-content">
@@ -976,16 +976,57 @@
             </div>
         </footer>
 
-        <a href="#modal-example" data-modal>Modal opener</a>
-
-        <div class="modal" id="modal-example">
+        <div class="modal show">
             <div class="modal-inner">
-                <div class="modal-box">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae, quo?
+                <div class="modal-box ">
+                    <a href="#" class="close"><i class="icon-close"></i></a>
+                    <div class="modal-body">
+                        <div class="modal-head">
+                            <div class="icon"><img src="assets/images/uploads/logo-acme.svg" alt="acme co" width="183" height="88"></div>
+                            <ul class="social-networks">
+                                <li>
+                                    <a href="#" class="icon-twitter"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="icon-linkedin"></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="icon-monitor"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="intro-txt">
+                            <h2>Focus Area</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et venenatis velit. Donec scelerisque leo eget turpis pellentesque, at scelerisque nunc hendrerit. Aliquam ac eros eget justo venenatis suscipit.</p>
+                        </div>
+                        <div class="articles-list">
+                            <h2>Learn More</h2>
+                            <ul>
+                                <li>
+                                    <h6><a href="#">Podcast lorem ipsum dolor sit amet consectetur</a></h6>
+                                    <span class="author">Firstname Lastname</span>
+                                </li>
+                                <li>
+                                    <h6><a href="#">Podcast lorem ipsum dolor sit amet consectetur</a></h6>
+                                    <span class="author">Firstname Lastname</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="video">
+                            <video controls poster="assets/images/uploads/video.png">
+                              <source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4' />
+                              <source id='webm' src="http://media.w3.org/2010/05/sintel/trailer.webm" type='video/webm' />
+                              <source id='ogv' src="http://media.w3.org/2010/05/sintel/trailer.ogv" type='video/ogg' />
+                          </video>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    IPO: ACME
                 </div>
             </div>
         </div>
     </div>
-    <script src="assets/compiled/js/app.js"></script>
+</div>
+<script src="assets/compiled/js/app.js"></script>
 </body>
 </html>
