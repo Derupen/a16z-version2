@@ -13,6 +13,42 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-whats-app:before {
+  content: "\e919";
+}
+.icon-slack:before {
+  content: "\e91a";
+}
+.icon-reddit:before {
+  content: "\e91b";
+}
+.icon-loom:before {
+  content: "\e91c";
+}
+.icon-linkedin-a:before {
+  content: "\e91d";
+}
+.icon-link:before {
+  content: "\e91e";
+}
+.icon-hacker-news:before {
+  content: "\e91f";
+}
+.icon-flipboard:before {
+  content: "\e920";
+}
+.icon-facebook:before {
+  content: "\e921";
+}
+.icon-envelope:before {
+  content: "\e922";
+}
+.icon-download:before {
+  content: "\e923";
+}
+.icon-discord:before {
+  content: "\e924";
+}
 .icon-sound-on:before {
   content: "\e900";
 }

@@ -1,14 +1,13 @@
 import '../global.js';
 import '../plugins/masonry'
+import '../plugins/custom-scroll'
 import Swiper from 'swiper/bundle'
 import 'swiper/swiper-bundle.css'
-import mCustomScrollbar from 'malihu-custom-scrollbar-plugin'
-import 'malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css'
 
 
 export const MobileNav = () => {
     var navopener = $('.nav-opener'),
-    navwrap   = $('.nav'),
+    navwrap   = $('.nav-wrap'),
     links     = navwrap.find('a'),
     navactive = 'nav-active';
 
@@ -16,7 +15,7 @@ export const MobileNav = () => {
         $('body').toggleClass(navactive);
     });
 
-    $('.nav li').each(function() {
+    $('#nav ul li').each(function() {
         var item = $(this);
         var drop = item.find('ul');
         var link = item.find('a').eq(0);
@@ -34,6 +33,23 @@ export const MobileNav = () => {
         var target = $(e.target);
         if(!target.closest(navopener).length && !target.closest(navwrap).length) {
             $('body').removeClass(navactive);
+        }
+    });
+}
+
+export const Search = () => {
+    var searchopener = $('.search-opener'),
+    searchblock   = $('.search-block'),
+    searchactive = 'search-active';
+
+    searchopener.click(function() {
+        $('body').toggleClass(searchactive);
+    });
+
+    $('html').on('click touchstart pointerdown MSPointerDown', function(e) {
+        var target = $(e.target);
+        if(!target.closest(searchopener).length && !target.closest(searchblock).length) {
+            $('body').removeClass(searchactive);
         }
     });
 }
@@ -151,17 +167,28 @@ export const SwiperSlider = () => {
     });
 
     var swiper = new Swiper('.podcast-slider', {
-        slidesPerView: "auto",
-        spaceBetween: 77,
+        slidesPerView: "1",
         loop:true,
         centeredSlides: true,
-        // autoplay: {
-        //   delay: 1000,
-        //   disableOnInteraction: true,
-        // },
+        autoplay: {
+          delay: 1000,
+          disableOnInteraction: true,
+        },
+        speed: 6000,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
+        },
+
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            1280: {
+                slidesPerView: 4,
+                spaceBetween: 77,
+            },
         },
     });
 
@@ -180,6 +207,63 @@ export const SwiperSlider = () => {
     });
 }
 
+
+export const MobileSwiper = () => {
+    const breakpoint = window.matchMedia('(min-width: 768px)');
+
+    let mySwiper;
+
+    const breakpointChecker = function() {
+        if ( breakpoint.matches === true ) {
+            if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
+            return;
+        } else if ( breakpoint.matches === false ) {
+            return enableSwiper();
+        }
+    }
+
+    const enableSwiper = function() {
+        var mySwiper = new Swiper('.book-slider', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 24,
+            centeredSlides: true,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+          },
+        });
+    }
+
+    breakpoint.addListener(breakpointChecker);
+    breakpointChecker();
+}
+
 export const CustomScroll = () => {
-    $(".s-content").mCustomScrollbar();
+    jcf.replaceAll();
+}
+
+export const Height = () => {
+    var windowHeight = $(window).height(),
+        HellobarHeight = $('.hello-bar').outerHeight() || 0,
+        HeaderHeight = $('#header').outerHeight(),
+        SearchHeight = $('.search-block .header').outerHeight() || 0;
+    var Height = function() {
+        $('.search-result').each(function() {
+            var block = $(this),
+            itemHeight  = windowHeight - (HellobarHeight + HeaderHeight + SearchHeight + 120) ;
+
+            block.css('height', itemHeight);
+        });
+
+        $('.nav-wrap').each(function() {
+            var block = $(this),
+            itemHeight  = windowHeight - (HellobarHeight + HeaderHeight + 18) ;
+
+            block.css('height', itemHeight);
+        });
+    }
+
+    Height();
+    $(window).on('resize load orientationChange', Height);
 }

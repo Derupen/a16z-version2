@@ -9,9 +9,33 @@
     margin: -20px -12px;
     padding-right: 10px;
 
+    @include media('<widescreen') {
+        padding-right: 0;
+    }
+
+    @include media('<desktop') {
+        margin: -15px -25px;
+    }
+
+    @include media('<tablet') {
+        padding-top: 9px;
+    }
+
     li {
         width: 33.33%;
         padding: 20px 12px;
+
+        @include media('<widescreen') {
+            width: 50%;
+        }
+
+        @include media('<desktop') {
+            padding: 15px 25px;
+        }
+
+        @include media('<tablet') {
+            width: 100%;
+        }
     }
 
     a {
@@ -73,18 +97,6 @@
             background-repeat: no-repeat;
             background-position: 0 0;
             background-size: cover;
-        }
-    }
-
-    .pattern {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-
-        img {
-            width: 100%;
         }
     }
 

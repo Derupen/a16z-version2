@@ -5,10 +5,31 @@
 .podcast-network {
     background: color(gray,1);
     padding: 85px 0;
+    overflow: hidden;
+
+    @include media('<desktop') {
+        padding: 40px 0 63px;
+    }
 
     h2 {
         color: color(orange,1);
         margin-bottom: 52px;
+
+        @include media('<desktop') {
+            margin-bottom: 42px;
+        }
+    }
+
+    .podcast-slider {
+        position: relative;
+    }
+
+    .swiper-pagination {
+        padding-top: 20px;
+
+        @include media('>=tablet') {
+            display: none;
+        }
     }
 }
 
@@ -17,15 +38,31 @@
     height: 412px;
     position: relative;
 
+    @include media('<desktop') {
+        width: 216px;
+        height: 216px;
+    }
+
+    @include media('<tablet') {
+        width: 100%;
+        height: auto;
+    }
+
     &:hover {
 
         .front {
-            transform: perspective(1000px) rotateY(180deg);
+
+            @include media('>=tablet') {
+                transform: perspective(1000px) rotateY(180deg);
+            }
         }
 
         .back{
-            transform: perspective(1000px) rotateY(0deg);
-            box-shadow: 0 0 20px 5px rgba(75, 79, 84, 0.2);
+
+            @include media('>=tablet') {
+                transform: perspective(1000px) rotateY(0deg);
+                box-shadow: 0 0 20px 5px rgba(75, 79, 84, 0.2);
+            }
         }
     }
 
@@ -33,10 +70,13 @@
         width: 100%;
         padding-top: 100%;
         position: relative;
-        backface-visibility: hidden;
-        transform: perspective(1000px) rotateY(0deg);
-        transition: 0.3s;
         box-shadow: 0 0 20px 5px rgba(75, 79, 84, 0.2);
+
+        @include media('>=tablet') {
+            backface-visibility: hidden;
+            transform: perspective(1000px) rotateY(0deg);
+            transition: 0.3s;
+        }
     }
 
     .img {
@@ -45,20 +85,34 @@
         right: 0;
         bottom: 0;
         left: 0;
+        background-size: cover; 
+        background-position: 50% 50%;
     }
 
     .back {
-        position: absolute;
-        top: 0;   
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: color(white,1);
-        border: 3px solid color(orange,1);
-        padding: 30px 21px;
-        backface-visibility: hidden;
-        transform: perspective(1000px) rotateY(-180deg);
-        transition: 0.3s;
+
+        @include media('>=tablet') {
+            position: absolute;
+            top: 0;   
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: color(white,1);
+            border: 2px solid color(orange,1);
+            padding: 15px 10px;
+            backface-visibility: hidden;
+            transform: perspective(1000px) rotateY(-180deg);
+            transition: 0.3s;
+        }
+
+        @include media('>=desktop') {
+            padding: 30px 21px;
+            border-width: 3px;
+        }
+
+        @include media('<tablet') {
+            padding: 24px;
+        }
     }
 
     .card-content {
@@ -70,6 +124,15 @@
         line-height: 1.2727;
         letter-spacing: -0.005em;
 
+        @include media('<desktop') {
+            font-size: 12px;
+        }
+
+        @include media('<tablet') {
+            font-size: 16px;
+            line-height: 1.25;
+        }
+
         .title {
             font-size: 32px;
             line-height: 1;
@@ -77,6 +140,31 @@
             letter-spacing: 0;
             display: block;
             margin-bottom: 20px;
+
+            @include media('<desktop') {
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+
+            @include media('<tablet') {
+                color: color(orange,1);
+                font-size: 28px;
+                line-height: 1;
+                letter-spacing: -0.5px;
+            }
+        }
+
+        .link {
+            @include media('<desktop') {
+                font-size: 16px;
+                padding-right: 22px;
+            }
+
+            &:after {
+                @include media('<desktop') {
+                    font-size: 12px;
+                }
+            }
         }
     }
 }

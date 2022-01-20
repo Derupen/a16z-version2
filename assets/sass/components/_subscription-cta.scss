@@ -1,0 +1,110 @@
+// ---------------------------------------------------------===
+// Subscription CTA styles
+// ---------------------------------------------------------===
+
+.content-wrapper {
+
+    + .subscription-cta {
+        margin-top: 205px;
+
+        @include media('<desktop') {
+            margin-top: 100px;
+        }
+    }
+}
+
+.subscription-cta {
+    background: color(black,2);
+    padding: 74px 0;
+    position: relative;
+    overflow: hidden;
+    color: color(white,1);
+    font-size: 20px;
+    line-height: 1.15;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    text-align: center;
+
+    .container {
+        max-width: 986px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .heading {
+        margin-bottom: 66px;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+    }
+}
+
+.subscription-form {
+    width: 100%;
+
+    .input-wrap {
+        border-bottom: 2px solid color(white,1);
+        position: relative;
+        padding-right: 52px;
+    }
+
+    input[type="email"] {
+        background: transparent;
+        border: none;
+        width: 100%;
+        color: color(white,1);
+        font-size: 36px;
+        line-height: 1.444;
+        font-weight: 300;
+        padding: 0;
+        outline: none;
+
+        @include placeholder {
+            color: color(white,1);
+        }
+    }
+
+    button[type="submit"] {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 52px;
+        border: none;
+        background: none;
+        outline: none;
+
+        &:hover:after {
+            color: color(orange,1);
+        }
+
+        &:after {
+            @include animate(color);
+            content: "\e915";
+            @include box-align(vc);
+            right: 0;
+            font: 20px/1 "icomoon";
+            color: color(white,1);
+        }
+    }
+
+    .note {
+        text-align: right;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: color(gray,5);
+        font-weight: 800;
+        padding-top: 12px;
+
+        a {
+            color: color(gray,5);
+
+            &:hover {
+                color: color(white,1);
+            }
+        }
+    }
+}

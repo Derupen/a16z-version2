@@ -25,6 +25,7 @@ $colors: (
         3: #d0d0ce,
         4: #a0a3a9,
         5: #97999b,
+        6: #c4c4c4,
     ),
     green: (
         1: #93c90e,
@@ -99,7 +100,7 @@ $niceCheckRadio: false;
 // grid 
 $usegrid: true;
 $grid-count: 12;
-$grid-gutter: 40px;
-$container-width: 1414px;
+$grid-gutter: 48px;
+$container-width: 1422px;
 // $grid-gutter-mobile: 20px;  // Define if the mobile gutter is different
 // $container-gutter: 40px; // Define if the container gutter is different than grid gutter

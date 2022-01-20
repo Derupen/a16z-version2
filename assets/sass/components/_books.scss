@@ -3,66 +3,197 @@
 // ---------------------------------------------------------===
 
 .books {
-	padding: 77px 0;
+    padding: 77px 0;
+    overflow: hidden;
 
-	h2 {
-		color: color(orange,1);
-		margin-bottom: 58px;
-	}
+    @include media('<desktop') {
+        padding: 49px 0;
+    }
 
-	.row {
-		display: flex;
-		flex-wrap: wrap;
-		margin: -50px -75px;
+    @include media('<tablet') {
+        padding: 22px 0 48px;
+    }
 
-		.col {
-			width: 50%;
-			padding: 50px 75px;
-			display: flex;
-			flex-wrap: wrap;
-		}
+    h2 {
+        color: color(orange,1);
+        margin-bottom: 58px;
 
-		a {
-			display: flex;
-			flex-wrap: wrap;
-			color: color(black,2);
+        @include media('<desktop') {
+            margin-bottom: 48px;
+        }
 
-			&:hover {
+        @include media('<tablet') {
+            margin-bottom: 38px;
+        }
+    }
 
-				.link {
-					color: color(green,1);
-				}
+    .book-slider {
 
-				.book {
-					filter: drop-shadow(-10px 10px 15px rgba(color(black,1), 0.65));
+        .swiper-wrapper {
 
-					img {
-						transform: translateY(-6px);
-					}
-				}
-			}
-		}
-	}
+            @include media('>=tablet') {
+                box-sizing: border-box
+            }
+        }
 
-	.book {
-		@include animate(all);
-		position: relative;
-		width: 216px;
-		filter: drop-shadow(-10px 10px 15px rgba(color(black,1), 0.5));
+        .pagination-wrapper {
 
-		img {
-			@include animate(all);
-			position: relative;
-			width: 100%;
-		}
-	}
+            @include media('<tablet') {
+                border-top: 1px solid color(gray,5);
+                padding-top: 30px;
+                margin-top: 30px;
+            }
+        }
+    }
 
-	.desc {
-		padding-left: 30px;
-		flex: 1;
-	}
+    .cols-wrap {
+        margin: -50px -75px;
 
-	.author {
-		margin-bottom: 20px;
-	}
+        @include media('<widescreen') {
+            margin: -30px;
+        }
+
+        @include media('>=tablet') {
+             display: flex;
+            flex-wrap: wrap;
+        }
+
+        @include media('<tablet') {
+            margin: 0;
+        }
+
+        .col {
+            width: 50%;
+            padding: 50px 75px;
+            display: flex;
+            flex-wrap: wrap;
+
+            @include media('<widescreen') {
+                padding: 30px;
+            }
+
+            @include media('<desktop') {
+                width: 100%;
+            }
+
+            @include media('<tablet') {
+                padding: 0;
+            }
+        }
+
+        a {
+            display: flex;
+            flex-wrap: wrap;
+            color: color(black,2);
+
+            &:hover {
+
+                .link {
+                    color: color(green,1);
+                }
+
+                .book {
+                    filter: drop-shadow(-10px 10px 15px rgba(color(black,1), 0.65));
+
+                    img {
+                        transform: translateY(-6px);
+                    }
+                }
+            }
+        }
+    }
+
+    .book {
+        @include animate(all);
+        position: relative;
+        width: 216px;
+        filter: drop-shadow(-10px 10px 15px rgba(color(black,1), 0.5));
+
+        @include media('<widescreen') {
+            width: 170px;
+        }
+
+        @include media('<desktop') {
+            width: 220px;
+        }
+
+        @include media('<tablet') {
+            width: 216px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        img {
+            @include animate(all);
+            position: relative;
+            width: 100%;
+        }
+    }
+
+    .desc {
+        padding-left: 30px;
+        flex: 1;
+
+        @include media('<desktop') {
+            padding-left: 45px;
+        }
+
+        @include media('<tablet') {
+            padding: 0;
+            width: 100%;
+            flex: none;
+        }
+
+        h6 {
+
+            @include media('<desktop') {
+                margin-bottom: 9px;
+            }
+
+            @include media('<tablet') {
+                font-size: 20px;
+                line-height: 1.15;
+            }
+        }
+    }
+
+    .author {
+        margin-bottom: 20px;
+
+        @include media('<tablet') {
+            margin-bottom: 35px;
+        }
+    }
+
+    .link {
+
+        @include media('<tablet') {
+            margin-top: 9px;
+        }
+    }
+}
+
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+
+    .swiper-pagination {
+        position: static;
+    }
+
+    .swiper-pagination-bullet {
+        @include animate(background border);
+        width: 15px;
+        height: 15px;
+        margin: 0 4px;
+        background: none;
+        border: 1px solid color(black,2);
+        border-radius: 50%;
+        opacity: 1;
+
+        &:hover,
+        &.swiper-pagination-bullet-active {
+            background: color(black,2);
+        }
+    }
 }

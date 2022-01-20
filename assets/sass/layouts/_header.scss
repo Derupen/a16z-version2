@@ -12,15 +12,18 @@
 
     .container {
         position: relative;
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     p {
         margin: 0;
+        padding-right: 40px;
     }
 
     .close {
         @include box-align(vc);
-        right: 20px;
+        right: 24px;
         color: color(white,1);
         width: 16px;
         height: 16px;
@@ -32,41 +35,120 @@
 }
 
 #header {
+    @include animate(background);
     padding: 40px 0;
     position: relative;
     z-index: 9998;
 
+    @include media('<desktop') {
+        padding: 25px 0;
+    }
+
     &:after {
-        @include box-align(hc);
         content: "";
         top: 100%;
-        background: url('#{$image-path}/bg-nav.png') no-repeat 50% 0 / contain;
-        width: 1682px;
+        left: 0;
+        right: 0;
+        position: absolute; 
+        background: url('#{$image-path}/bg-nav.png') no-repeat 50% 0 / cover;
         height: 185px;
         pointer-events: none;
+
+        @include media('<desktop') {
+            background-image: url('#{$image-path}/bg-nav-tablet.png');
+            height: 75px;
+        }
+    }
+
+    .nav-active &{
+
+        @include media('<desktop') {
+            background: color(black,2);
+        }
     }
 
     > .container {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between;
-        position: relative; 
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     .nav-opener {
-        @include box-align(vc);
-        right: 20px;
+        display: block;
         color: color(black,2);
-        font-size: 16px;
+        margin-left: 44px;
+        width: 22px;
+        height: 20px;
+        position: relative;
+
+        &:after,
+        &:before {
+            @include animate(opacit visibility);
+            content: "";
+            @include box-align(vhc);
+            font-family: "icomoon";
+            line-height: 1;
+        }
+
+        &:before {
+            content: "\e90a";
+            font-size: 18px;
+            color: color(black,2);
+
+            .nav-active & {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        &:after {
+            content: "\e912";
+            font-size: 18px;
+            color: color(white,1);
+            opacity: 0;
+            visibility: hidden;
+
+            .nav-active & {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
     }
 
     .logo {
         width: 215px;
 
+        @include media('<desktop') {
+            width: 152px;
+        }
+
         a {
             display: block;
         }
+
+        svg {
+            width: 100%;
+
+            path {
+                @include animate(all);
+
+                .nav-active & {
+
+                    @include media('<desktop') {
+                        fill: color(white,1);
+                    }
+                }
+            }
+        }
+    }
+
+    .header-r {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
     }
 }
 
@@ -74,23 +156,103 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding-right: 66px;
+
+    @include media('<desktop') {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: color(black,2);
+        padding: 10px 24px 20px;
+        overflow: auto;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .nav-active & {
+
+        @include media('<desktop') {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    @include media('>=desktop') {
+        height: auto !important;
+    }
 }
 
 #nav {
+
+    @include media('>=desktop') {
+        order: 1;
+    }
 
     > ul {
         @extend %listreset;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        margin: 0 -17px;
+        margin: -56px -17px;
+
+        @include media('<desktop') {
+            display: block;
+            margin: 0;
+            font-size: 30px;
+            line-height: 1;
+            font-weight: 500;
+        }
 
         > li {
-            padding: 0 17px;
+            padding: 56px 17px;
+
+            @include media('<desktop') {
+                padding: 0;
+            }
+
+            + li {
+                @include media('<desktop') {
+                    margin-top: 30px;
+                }
+            }
+
+            &:hover {
+
+                .dropdown {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
 
             > a {
                 color: color(black,2);
+
+                @include media('<desktop') {
+                    color: color(white,1);
+                }
+
+                &.hasdrop-a {
+
+                    @include media('<desktop') {
+                        display: inline-block;
+                        vertical-align: top;
+                        padding-right: 30px;
+                        position: relative;
+                    }
+
+                    &:after {
+
+                        @include media('<desktop') {
+                            content: "\e915";
+                            @include box-align(vc);
+                            color: color(white,1);
+                            right: 0;
+                            font: 16px/1 "icomoon";
+                        }
+                    }
+                }
             }
         }
     }
@@ -98,74 +260,168 @@
 
 .search-nav {
     padding-left: 44px;
+    position: relative;
 
-    a {
+    @include media('<desktop') {
+        padding: 0;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    @include media('>=desktop') {
+        order: 2;
+    }
+
+    .search-opener {
         color: color(black,2);
+
+        @include media('<desktop') {
+            @include box-align(vc);
+            right: 0;
+            color: color(white,1);
+        }
+    }
+
+    input[type="search"] {
+        width: 100%;
+        background: none;
+        outline: none;
+        border-radius: 0;
+        border: solid color(white,1);
+        border-width: 0 0 1px;
+        padding: 7px 0;
+        font-size: 18px;
+        line-height: 1;
+        color: color(white,1);
+        padding-right: 20px;
+
+        @include placeholder {
+            color: color(white,1);
+        }
+
+        @include media('>=desktop') {
+            display: none;
+        }
     }
 }
 
 .dropdown {
-    background: color(black,2);
-    padding: 40px 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 9999;
 
-    &:before,
-    &:after {
-        content: "";
+    @include media('>=desktop') {
+        @include animate(opacity visibility);
         background: color(black,2);
+        padding: 42px 0;
         position: absolute;
-        right: 100%;
-        left: -9999px;
-        top: 0;
-        bottom: 0;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        opacity: 0;
+        visibility: hidden;
+        display: block !important;
     }
 
-    &:after {
-        right: -9999px;
-        left: 100%;
+    @include media('<desktop') {
+        overflow: hidden;
+        padding-top: 30px;
+    }
+
+    > .container {
+
+        @include media('<desktop') {
+            padding: 0;
+        }
     }
 
     .wrap {
         display: flex;
         flex-wrap: wrap;
+
+        @include media('<desktop') {
+            display: block;
+        }
     }
 
     .drop-intro {
-        width: 284px;
+        width: 280px;
         color: color(gray,5);
-        padding-right: 30px;
+        line-height: 1.4;
+        padding: 3px 30px 0 0;
+
+        @include media('<desktop') {
+            display: none;
+        }
 
         .title {
             display: block;
             color: color(white,1);
             font-size: 44px;
             line-height: 1;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }
     }
 
     .drop-list-wrap {
         flex: 1;
-        max-width: 936px;
+        max-width: 927px;
+        height: 310px;
+        padding-left: 41px;
+        position: relative;
+
+        @include media('<desktop') {
+            flex: none;
+            max-width: none;
+            padding-left: 24px;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            background: color(gray,5);
+            width: 1.5px;
+            top: 0;
+            left: 2px;
+            bottom: 0;
+        }
     }
 
     .drop-list {
+        overflow: hidden;
+    }
+
+    ul {
         @extend %listreset;
-        margin: -40px -25px;
-        padding-bottom: 72px;
+        margin: -36px -22px;
         display: flex;
         flex-wrap: wrap;
         font-size: 21px;
         line-height: 1.19;
         font-weight: 700;
 
+        @include media('<desktop') {
+            margin: -15px;
+        }
+
+        @include media('<tablet') {
+            font-size: 18px;
+        }
+
         li {
             width: 25%;
-            padding: 40px 25px;
+            padding: 36px 22px;
+            box-sizing: border-box;
+
+            @include media('<widescreen') {
+                width: 33.33%;
+            }
+
+            @include media('<desktop') {
+                padding: 15px;
+            }
+
+            @include media('<tablet') {
+                width: 50%;
+            }
 
             a {
                 color: color(white,1);
@@ -176,10 +432,34 @@
             }
         }
     }
-}
 
-.longEnough {
-  max-height: 220px;
-  width: 350px;
-  overflow: auto;
+    .jcf-scrollbar-vertical {
+        right: auto;
+        left: 0;
+        width: 6px;
+        background: none;
+        position: relative;
+
+        &:after {
+            content: "";
+            @include box-align(hc);
+            background: color(gray,5);
+            width: 1.5px;
+            top: 0;
+            bottom: 0;
+        }
+
+        .jcf-scrollbar-handle {
+            width: 6px;
+            background: color(white,1);
+            z-index: 1;
+        }
+
+        .jcf-scrollbar-dec,
+        .jcf-scrollbar-inc {
+            display: none;
+            height: 0;
+            width: 0;
+        }
+    }
 }
