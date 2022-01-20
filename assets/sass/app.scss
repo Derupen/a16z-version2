@@ -37,6 +37,7 @@ $media-expressions: (
 @import 'base/forms';
 
 @import 'vendors/grid';
+@import 'vendors/custom-scroll';
 
 @import 'layouts/header';
 @import 'layouts/common';
@@ -56,3 +57,4 @@ $media-expressions: (
 @import 'components/subscription-cta';
 @import 'components/modal';
 @import 'components/single-post';
+@import 'components/search';

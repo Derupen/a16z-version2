@@ -49,6 +49,13 @@
         }
     }
 
+    .desc {
+
+        @include media('<tablet') {
+            max-width: 366px;
+        }
+    }
+
     .logo-wrap.container {
         position: absolute;
         top: 50px;

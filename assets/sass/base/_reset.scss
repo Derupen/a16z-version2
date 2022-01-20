@@ -20,6 +20,10 @@ body {
     min-width: $base-min-width;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    &.nav-active {
+        overflow: hidden;
+    }
 }
 
 // adaptive images

@@ -69,6 +69,7 @@
 
 .content-wrapper {
     padding-top: 82px;
+    overflow: hidden;
 
     @include media('<desktop') {
         padding-top: 27px;
@@ -101,17 +102,6 @@
         display: block;
     }
 
-    .block {
-
-        + .block {
-            margin-top: 90px;
-
-            @include media('<desktop') {
-                margin-top: 46px;
-            }
-        }
-    }
-
     .content {
         flex: 1;
         padding: 0 59px 100px 0;
@@ -128,6 +118,31 @@
 
         @include media('<tablet') {
             padding-bottom: 59px;
+        }
+
+        .block {
+
+            + .block {
+                margin-top: 90px;
+
+                @include media('<desktop') {
+                    margin-top: 46px;
+                }
+            }
+        }
+    }
+
+    .info-content {
+        font-size: 16px;
+        line-height: 1.625;
+        letter-spacing: -0.005em;
+
+        p {
+            margin: 0;
+
+            + p {
+                margin-top: 23px;
+            }
         }
     }
 }

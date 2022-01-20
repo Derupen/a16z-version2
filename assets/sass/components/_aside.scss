@@ -18,25 +18,44 @@
         border: none;
     }
 
-    .block {
-
-        + .block {
-            margin-top: 230px;
-
-            @include media('<desktop') {
-                margin-top: 46px;
-            }
-        }
+    &.on-mobile {
+        padding: 0 24px 24px;
     }
 
-    > h6 {
-        font-size: 20px;
-        line-height: 1.172;
-        letter-spacing: 2.5px;
-        margin-bottom: 53px;
+    .block {
+        margin-bottom: 230px;
 
-        @include media('<tablet') {
-            margin-bottom: 35px;
+        @include media('<desktop') {
+            margin-bottom: 46px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.on-mobile {
+
+            @include media('>=tablet') {
+                display: none;
+            }
+        }
+
+        &.on-desktop {
+
+            @include media('<tablet') {
+                display: none;
+            }
+        }
+
+        > h6 {
+            font-size: 20px;
+            line-height: 1.172;
+            letter-spacing: 2.5px;
+            margin-bottom: 53px;
+
+            @include media('<tablet') {
+                margin-bottom: 35px;
+            }
         }
     }
 
@@ -54,6 +73,10 @@
         .book {
             width: 170px;
             filter: drop-shadow(-10px 10px 15px rgba(color(black,1), 0.5));
+
+            @include media('<widescreen') {
+                width: 120px;
+            }
         }
 
         .desc {
