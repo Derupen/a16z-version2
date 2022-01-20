@@ -164,6 +164,20 @@ export const SwiperSlider = () => {
           clickable: true,
         },
     });
+
+    var swiper = new Swiper('.instacart-carousel', {
+        effect: "fade",
+
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+    });
 }
 
 export const CustomScroll = () => {
