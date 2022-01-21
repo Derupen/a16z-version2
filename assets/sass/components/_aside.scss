@@ -3,7 +3,7 @@
 // ---------------------------------------------------------===
 
 .aside {
-    width: 408px;
+    width: 414px;
     border-left: 1px solid color(gray,5);
     padding: 0 0 100px 70px;
 
@@ -71,7 +71,7 @@
         flex-wrap: wrap;
 
         .book {
-            width: 170px;
+            width: 176px;
             filter: drop-shadow(-10px 10px 15px rgba(color(black,1), 0.5));
 
             @include media('<widescreen') {

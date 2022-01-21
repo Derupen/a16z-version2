@@ -10,6 +10,10 @@
         @include media('<desktop') {
             margin-top: 100px;
         }
+
+        @include media('<tablet') {
+            margin-top: 63px;
+        }
     }
 }
 
@@ -33,6 +37,10 @@
 
     .heading {
         margin-bottom: 66px;
+
+        @include media('<tablet') {
+            margin-bottom: 36px;
+        }
     }
 
     h3 {
@@ -59,6 +67,14 @@
         font-weight: 300;
         padding: 0;
         outline: none;
+
+        @include media('<desktop') {
+            font-size: 32px;
+        }
+
+        @include media('<tablet') {
+            font-size: 28px;
+        }
 
         @include placeholder {
             color: color(white,1);
