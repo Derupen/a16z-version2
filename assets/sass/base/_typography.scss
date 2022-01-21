@@ -50,6 +50,10 @@ h3, .h3 {
     font-size: $h3-font-size;
     line-height: 1.083;
     letter-spacing: -0.5px;
+
+    @include media('<tablet') {
+        font-size: 34px;
+    }
 }
 
 h4, .h4 {

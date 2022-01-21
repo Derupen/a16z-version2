@@ -12,27 +12,38 @@
     color: color(white,1);
     margin-bottom: 20px;
 
-    [class*="bg-"] {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 1;
+    @include media('<tablet') {
+        padding: 0;
+        margin: 0;
+        background: none !important;
+        min-height: 1px;
     }
 
-    .bg-orange {
+    &.bg-orange {
         background: color(orange,1);
+
+        .avatar-col {
+
+            @include media('<tablet') {
+                background: color(orange,1);
+            }
+        }
     }
 
-    .pattern {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+    + .content-wrapper {
+
+        @include media('<tablet') {
+            padding-top: 29px;
+        }
+    }
+
+    > .pattern {
         z-index: 2;
         overflow: hidden;
+
+        @include media('<tablet') {
+            display: none;
+        }
 
         img {
             width: 100%;
@@ -46,11 +57,20 @@
         display: flex;
         flex-wrap: wrap;
         align-items: flex-end;
+        position: relative;
+
+        @include media('>=tablet') {
+            flex-direction: row-reverse;
+        }
+
+        @include media('<tablet') {
+            padding: 0;
+        }
     }
 
     .content-wrap {
         flex: 1;
-        padding: 0 20px 58px 0;
+        padding: 0 20px 20px 0;
 
         strong {
             font-size: 14px;
@@ -68,22 +88,84 @@
         h4 {
             font-weight: 300;
             margin-bottom: 35px;
+
+            &:last-child {
+
+                @include media('<tablet') {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        @include media('<tablet') {
+            padding: 60px 24px 0;
+            color: color(black,2);
+        }
+    }
+
+    .avatar-col {
+
+        @include media('<tablet') {
+            width: 100%;
+            position: relative;
+        }
+
+        .inner {
+            
+            @include media('<tablet') {
+                width: 100%;
+                position: relative;
+                min-height: 296px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                overflow: hidden;
+            }
+        }
+
+        .pattern {
+
+            @include media('>=tablet') {
+                display: none;
+            }
         }
     }
 
     .avatar-wrap {
         width: 336px;
         margin-right: 74px;
+        position: relative;
+        z-index: 3;
+        overflow: hidden;
 
         @include media('<desktop') {
             width: 200px;
             margin-right: 0;
         }
+
+        @include media('<tablet') {
+            width: 336px;
+            margin: 0 auto;
+        }
     }
 }
 
 .social-connects-wrap {
-    margin-bottom: -87px;
+    position: absolute;
+    bottom: -20px;
+    left: 24px;
+    right: 0;
+    z-index: 4;
+
+    @include media('<desktop') {
+        left: 65px;
+    }
+
+    @include media('<tablet') {
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
 }
 
 .social-connects {
@@ -91,6 +173,10 @@
     display: flex;
     flex-wrap: wrap;
     margin: -9px;
+
+    @include media('<tablet') {
+        justify-content: center;
+    }
 
     li {
         padding: 9px;
