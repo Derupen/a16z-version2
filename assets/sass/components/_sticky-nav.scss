@@ -1,0 +1,173 @@
+// ---------------------------------------------------------===
+// Sticky Nav
+// ---------------------------------------------------------===
+
+body.sticky-drop-active {
+    overflow: hidden;
+}
+
+.sticky-nav {
+    font-size: 18px;
+    line-height: 1.7778;
+    padding-top: 3px;
+    width: 100%;
+    @include animate(visibility opacity);
+
+    @include media('<desktop') {
+        position: fixed;
+        left: 0;
+        top: 103px;
+        width: 100%;
+        max-height: calc(100vh - 103px);
+        z-index: 99;
+        font-size: 18px;
+        line-height: 1.5;
+        overflow-y: auto;
+        padding-bottom: 40px;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .sticky-drop-active & {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .close {
+        display: none;
+
+        @include media('<desktop') {
+            display: block;
+            position: absolute;
+            top: auto;
+            bottom: -36px;
+            left: 37px;
+            display: block;
+        }
+    }
+
+    .top {
+        @include media('<desktop') {
+            background: #4b4f54;
+            padding: 44px 60px 23px;
+            position: relative;
+            margin-top: -3px;
+        }
+        @include media('<414px') {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    ul {
+        @extend %listreset;
+
+        @include media('<desktop') {
+        }
+
+    }
+
+    a {
+        color: #97999B;
+        padding: 6px 0;
+        display: block;
+        font-weight: 700;
+
+        @include media('<desktop') {
+            color: #fff;
+            font-weight: 600;
+        }
+    }
+
+    li {
+
+        @include media('<desktop') {
+            padding-bottom: 5px;
+        }
+
+        &:before {
+            display: none;
+        }
+
+        &.active {
+            a {
+                color: color(orange);
+            }
+        }
+    }
+}
+
+.backTotop {
+    @include media('<desktop') {
+        display: none;
+    }
+}
+
+#toc-participants {
+    &.hide .top { display: none; }
+}
+
+.aside-article {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 300;
+    margin-bottom: 81px;
+
+    .title {
+        display: block;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: color(orange);
+        font-size: 14px;
+        margin-bottom: 34px;
+        letter-spacing: 2.5px;
+
+    }
+}
+
+.toc-hold {
+    .title {
+        display: block;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 800;
+        border-bottom: 1px solid #97999B;
+        padding: 0 10px 10px 23px;
+        letter-spacing: 2.5px;
+        margin:  0 0 5px -23px;
+
+        @include media('<desktop') {
+            color: #5BC2E7;
+            border-color: #fff;
+            padding-bottom: 14px;
+            margin-right: -23px;
+        }
+
+        @include media('<414px') {
+            margin:  0 0 5px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.toc-opener {
+    display: none;
+
+    @include media('<desktop') {
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 103px;
+    }
+}
+
+.sticky-drop-active {
+    @include media('<desktop') {
+        overflow: hidden;
+    }
+
+    .toc-open {
+        display: none;
+    }
+}

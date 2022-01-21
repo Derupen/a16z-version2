@@ -3,7 +3,8 @@ $breakpoints: (
     'phone': 480px,
     'tablet': 768px,
     'desktop': 1024px,
-    'widescreen': 1280px
+    'widescreen': 1280px,
+    'wider': 1500px
 );
 
 // keywords
@@ -59,3 +60,7 @@ $media-expressions: (
 @import 'components/single-post';
 @import 'components/table';
 @import 'components/search';
+@import 'components/social-networks';
+@import 'components/contributors';
+@import 'components/sticky-nav';
+@import 'components/article-banner';

@@ -14,4 +14,6 @@ $(document).ready(function($){
     Helper.SwiperSlider();
     Helper.MobileSwiper();
     Helper.Search();
+    Helper.SocialNetworks();
+    Helper.StickySidebar();
 });

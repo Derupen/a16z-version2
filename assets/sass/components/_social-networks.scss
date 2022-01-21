@@ -1,0 +1,101 @@
+// ---------------------------------------------------------===
+// Social Networks styles
+// ---------------------------------------------------------===
+
+.share-holder {
+	padding-top: 10px;
+}
+
+.social--networks {
+	max-width: 161px;
+	font-size: 16px;
+	text-transform: capitalize;
+	position: relative;
+
+	.share-opener {
+		background: #5bc2e7;
+		display: block;
+		padding: 10px 20px;
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: -0.5px;
+		position: relative;
+		color: #fff;
+		@include animate(background);
+
+		&:after {
+			font-family: 'icomoon';
+			content: "\e917";
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 18px;
+			font-size: 12px;
+			font-weight: 400;
+			@include animate(transform);
+		}
+	}
+
+	ul {
+		position: absolute;
+		left: 0;
+		top: 100%;
+		width: 100%;
+		border: 1px solid #97999b;
+		background: #fff;
+		padding: 7px 0 13px;
+		transform: translateY(5px);
+		opacity: 0;
+		visibility: hidden;
+		@include animate(transform opacity visibility);
+	}
+
+	li {
+		padding: 0;
+		margin: 0;
+
+		&:before {
+			display: none;
+		}
+
+		.icon-envelope {
+			font-size: 13px;
+		}
+
+		.icon-twitter {
+			font-size: 14px;
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+			color: #4B4F54;
+			padding: 3px 5px 3px 21px;
+			@include animate(color);
+
+			&:hover {
+				color: #5BC2E7;
+			}
+		}
+
+		[class^="icon-"] {
+			margin-right: 11px;
+			color: #5bc2e7;
+		}
+	}
+	
+	&:hover,
+	&.hover {
+		ul {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+		}
+
+		.share-opener {
+			&:after {
+				transform: translateY(-50%) rotate(-180deg);
+			}
+		}
+	}
+}

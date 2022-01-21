@@ -3,6 +3,7 @@ import '../plugins/masonry'
 import '../plugins/custom-scroll'
 import Swiper from 'swiper/bundle'
 import 'swiper/swiper-bundle.css'
+import 'sticky-sidebar-v2/dist/jquery.sticky-sidebar'
 
 
 export const MobileNav = () => {
@@ -266,4 +267,70 @@ export const Height = () => {
 
     Height();
     $(window).on('resize load orientationChange', Height);
+}
+
+export const SocialNetworks = () => {
+    document.querySelectorAll('.js-dropdown').forEach(
+        function (
+            dropdown
+        ) {
+            dropdown.addEventListener('mouseenter', (e) => {
+                if (!dropdown.classList.contains('hover')) {
+                    dropdown.classList.add('hover')
+                }
+            })
+            dropdown.addEventListener('mouseleave', (e) => {
+                if (dropdown.classList.contains('hover')) {
+                    dropdown.classList.remove('hover')
+                }
+            })
+        }
+    )
+}
+
+export const StickySidebar = () => {
+    // var header = $('#header'),
+    var holder = $('.sticky-nav'),
+        opener = $('.toc-opener'),
+        link = holder.find('ul a');
+
+    if (holder.length > 0 && $(window).width() > 1151) {
+        holder.stickySidebar({
+            topSpacing: function () {
+                return ($('#header').outerHeight() + 18);
+            },
+            bottomSpacing: 60,
+        });
+    }
+
+    opener.click(function (e) {
+        e.preventDefault();
+        $('body').toggleClass('sticky-drop-active');
+    });
+
+    link.click(function (e) {
+        $('body').removeClass('sticky-drop-active');
+        $(this).parent().siblings().removeClass('active');
+        $(this).parent().hasClass('active') ? $(this).parent().removeClass('active') : $(this).parent().toggleClass('active');
+        var href = $(this).attr('href').split('#');
+        $('html, body').stop().animate({ scrollTop: $('#' + href[1]).offset().top - 110 + 'px' }, 300);
+        opener.find('.currect-item').text($(this).text());
+    });
+
+    /*const toc = $('#toc-participants');
+    if(toc.length > 0) {
+        var resizeToc = function() {
+            const t1 = (window.innerHeight - 130);
+            const t2 = toc.find('.top').height();
+
+            if(t1 <= t2) {
+                toc.addClass('hide');
+            } else {
+                toc.removeClass('hide');
+            }
+        }
+
+        resizeToc();
+        $(window).on('load scroll resize orientationchange', resizeToc);
+    }*/
 }

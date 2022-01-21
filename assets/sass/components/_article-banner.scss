@@ -1,0 +1,48 @@
+// ---------------------------------------------------------===
+// Article Banner
+// ---------------------------------------------------------===
+
+.article-banner {
+	position: relative;
+	overflow: hidden;
+	background-color: #ed8b00;
+	z-index: 1;
+	background-size: cover;
+	background-position: 50% 50%;
+
+	.container {
+		min-height: 300px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@include media('<tablet') {
+			min-height: 200px;
+		}
+	}
+
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 4px;
+		width: 46.5%;
+		background: #ED8B00;
+		content: "";
+		z-index: 1;
+	}
+
+	.bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		z-index: -1;
+		min-width: 1400px;
+
+		img {
+			width: 100%;
+		}
+	}
+}
