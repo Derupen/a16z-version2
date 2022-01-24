@@ -21,11 +21,23 @@
         }
     }
 
+    &:after {
+        position: absolute;
+        left: -50px;
+        right: -50px;
+        height: 30px;
+        bottom: 100%;
+        content: "";
+        border-radius: 100%;
+        box-shadow: 0 0 70px color(black);
+        z-index: -1;
+    }
+
     &:before {
         position: absolute;
         top: 0;
         left: 0;
-        height: 4px;
+        height: 5px;
         width: 46.5%;
         background: color(orange);
         content: "";
@@ -54,5 +66,13 @@
         @include media('<tablet') {
           padding-top: 29px;
         }
+
+        &:before {
+            display: none;
+        }
+    }
+
+    &.style-01 {
+        background: color(purple,1);
     }
 }

@@ -17,4 +17,6 @@ $(document).ready(function($){
     Helper.SocialNetworks();
     Helper.StickySidebar();
     Helper.moveContent();
+    Helper.Anchor();
+    Helper.goTop();
 });

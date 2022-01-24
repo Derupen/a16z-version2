@@ -1,6 +1,6 @@
 $breakpoints: (
     'xs-phone': 320px,
-    'phone': 480px,
+    'phone': 640px,
     'tablet': 768px,
     'desktop': 1024px,
     'widescreen': 1280px,
@@ -65,3 +65,8 @@ $media-expressions: (
 @import 'components/sticky-nav';
 @import 'components/article-banner';
 @import 'components/testimonial';
+@import 'components/related-reading';
+@import 'components/author-infos';
+@import 'components/logo-list';
+@import 'components/instacart-carouse';
+@import 'components/image-slider';

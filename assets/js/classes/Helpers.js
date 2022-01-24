@@ -206,6 +206,18 @@ export const SwiperSlider = () => {
           clickable: true,
         },
     });
+
+    var swiper = new Swiper('.image-slider', {
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+    });
 }
 
 
@@ -356,4 +368,38 @@ export const moveContent = () => {
 	win.resize(function() {
 		init()
 	})
+}
+
+export const Anchor = () => {
+    $('a.go-top[href*="#"]:not([href="#"])').click(function () {
+        var headerHeight = $('#header').outerHeight();
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top - headerHeight
+                }, 1000);
+                return false;
+            }
+        }
+    });
+}
+
+export const goTop = () => {
+	var win = jQuery(window);
+	
+	jQuery('.go-top').each(function(){
+		var backBtn = jQuery(this);
+		
+		win.on('load scroll', function(){
+			var offset = jQuery('#header').outerHeight();
+			
+			if (win.scrollTop() > offset) {
+				backBtn.addClass('visible');
+			}else{
+				backBtn.removeClass('visible');
+			}
+		});
+	});
 }
