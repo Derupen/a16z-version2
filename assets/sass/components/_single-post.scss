@@ -536,6 +536,14 @@
         letter-spacing: 2.5px;
         font-weight: 800;
         padding-top: 7px;
+
+        a {
+            color: #5f636a;
+
+            &:hover {
+                color: color(white);
+            }
+        }
     }
 
     .mktoField,

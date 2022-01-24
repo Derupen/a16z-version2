@@ -47,8 +47,16 @@
         margin-bottom: 20px;
     }
 
+    .blue-pattern {
+        display: none;
+    }
+
     &.bg-blue {
         background: color(blue,3);
+
+        .gray-pattern {
+            display: none;
+        }
 
         .note {
             a {
