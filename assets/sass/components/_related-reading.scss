@@ -1,0 +1,152 @@
+// ---------------------------------------------------------===
+// Related Reading styles
+// ---------------------------------------------------------===
+
+.related-reading {
+    margin: 0 -96px 116px 0;
+
+    @include media('<wider') {
+        margin-right: 0;
+    }
+
+    &.style-01 {
+        margin-bottom: 12px;
+    }
+
+    .title {
+        display: block;
+        font-size: 26px;
+        font-weight: 500;
+        color: color(gray,5);
+        letter-spacing: -1px;
+        margin-bottom: 15px;
+    }
+
+    .row {
+        margin: 0 -13px;
+        display: flex;
+    }
+
+    [class^='col-'] {
+        padding: 13px;
+    }
+
+    .block {
+        height: 100%;
+        background: color(gray,1);
+        line-height: 1;
+        font-weight: 600;
+        display: block;
+        position: relative;
+        padding: 34px 24px 46px;
+        color: color(black,2);
+        border: 2px solid color(gray,1);
+        @include animate(border-color);
+
+        &:hover {
+            border-color: color(orange);
+        }
+    }
+
+    h6 {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 14px;
+
+        i {
+            color: color(gray,4);
+            font-size: 12px;
+            margin-left: 5px;
+        }
+    }
+
+    .action {
+        position: absolute;
+        bottom: 22px;
+        left: 25px;
+        color: color(orange);
+        font-weight: 800;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+    + {
+        h4,
+        .h4 {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.related-item {
+    background: color(gray,1);
+    line-height: 1;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 28px 49px 28px 28px;
+    color: color(black,2);
+    border: 2px solid color(gray,1);
+    @include animate(border-color);
+    margin-bottom: 17px;
+    align-items: center;
+    min-height: 106px;
+    letter-spacing: -0.5px;
+
+    @include media('<wider') {
+      padding-right: 24px;
+    }
+
+    @include media('<desktop') {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @include media('<phone') {
+      display: block;
+    }
+
+    &:hover {
+        border-color: color(orange);
+    }
+
+    h6 {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 11px;
+        letter-spacing: 0;
+
+        i {
+            color: color(gray,4);
+            font-size: 12px;
+            margin-left: 5px;
+        }
+    }
+
+    p {
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    .action {
+        color: color(orange);
+        font-weight: 800;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        padding-left: 15px;
+        position: static;
+
+        @include media('<phone') {
+          padding : 30px 0 0;
+          display: block;
+        }
+    }
+}

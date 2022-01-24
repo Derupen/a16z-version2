@@ -1,0 +1,50 @@
+// ---------------------------------------------------------===
+// Image slider styles
+// ---------------------------------------------------------===
+
+.image-slider-hold {
+    margin: 34px -95px 58px 0;
+
+    @include media('<wider') {
+        margin-right: 0;
+    }
+
+    .image-slider {
+        overflow: hidden;
+        position: relative;
+
+        .swiper-pagination-bullets {
+            bottom: 13px !important;
+            right: 15px;
+            left: auto !important;
+            width: auto !important;
+
+            .swiper-pagination-bullet {
+                width: 20px;
+                height: 20px;
+                border: 1px solid color(blue);
+                background: transparent;
+                opacity: 1;
+                margin: 0 5px 0 6px !important;
+
+                &.swiper-pagination-bullet-active,
+                &:hover {
+                    background: color(blue);
+                }
+            }
+        }
+    }
+
+    .share {
+        right: 19px;
+        top: 20px;
+    }
+
+    .slide {
+        position: relative;
+    }
+
+    .caption {
+        padding: 20px 0;
+    }
+}

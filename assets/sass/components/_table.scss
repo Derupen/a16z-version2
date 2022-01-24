@@ -40,6 +40,10 @@
 		position: relative;
 		z-index: 2;
 
+		@include media('<tablet') {
+		  padding: 0 24px;
+		}
+
 		* {
 			margin: 0;
 		}
@@ -52,6 +56,10 @@
 			.title {
 				font-weight: 400;
 				margin-right: 24px;
+
+				@include media('<tablet') {
+				  margin-right: 10px;
+				}
 			}
 		}
 
@@ -398,6 +406,10 @@
 	@media only screen and (max-width: 1023px) {
 		display: block;
 		font-size: 16px;
+	}
+
+	@include media('<phone') {
+	  font-size: 12px;
 	}
 
 	thead {

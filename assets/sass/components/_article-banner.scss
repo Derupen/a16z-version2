@@ -3,46 +3,76 @@
 // ---------------------------------------------------------===
 
 .article-banner {
-	position: relative;
-	overflow: hidden;
-	background-color: #ed8b00;
-	z-index: 1;
-	background-size: cover;
-	background-position: 50% 50%;
+    position: relative;
+    overflow: hidden;
+    background-color: color(orange);
+    z-index: 1;
+    background-size: cover;
+    background-position: 50% 50%;
 
-	.container {
-		min-height: 300px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+    .container {
+        min-height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-		@include media('<tablet') {
-			min-height: 200px;
-		}
-	}
+        @include media('<tablet') {
+            min-height: 200px;
+        }
+    }
 
-	&:before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 4px;
-		width: 46.5%;
-		background: #ED8B00;
-		content: "";
-		z-index: 1;
-	}
+    &:after {
+        position: absolute;
+        left: -50px;
+        right: -50px;
+        height: 30px;
+        bottom: 100%;
+        content: "";
+        border-radius: 100%;
+        box-shadow: 0 0 70px color(black);
+        z-index: -1;
+    }
 
-	.bg {
-		position: absolute;
-		left: 0;
-		top: 0;
-		bottom: 0;
-		right: 0;
-		z-index: -1;
-		min-width: 1400px;
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 5px;
+        width: 46.5%;
+        background: color(orange);
+        content: "";
+        z-index: 1;
 
-		img {
-			width: 100%;
-		}
-	}
+        @include media('<tablet') {
+          display: none;
+        }
+    }
+
+    .bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        min-width: 1674px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    + .single-blog-post {
+        @include media('<tablet') {
+          padding-top: 29px;
+        }
+
+        &:before {
+            display: none;
+        }
+    }
+
+    &.style-01 {
+        background: color(purple,1);
+    }
 }

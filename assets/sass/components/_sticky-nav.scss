@@ -18,7 +18,7 @@ body.sticky-drop-active {
         left: 0;
         top: 103px;
         width: 100%;
-        max-height: calc(100vh - 103px);
+        height: 100vh;
         z-index: 99;
         font-size: 18px;
         line-height: 1.5;
@@ -26,6 +26,7 @@ body.sticky-drop-active {
         padding-bottom: 40px;
         visibility: hidden;
         opacity: 0;
+        background: rgba(#3C3E43, 0.42);
     }
 
     .sticky-drop-active & {
@@ -51,7 +52,7 @@ body.sticky-drop-active {
             background: #4b4f54;
             padding: 44px 60px 23px;
             position: relative;
-            margin-top: -3px;
+            margin: -3px 0 100px;
         }
         @include media('<414px') {
             padding-left: 15px;
@@ -113,6 +114,10 @@ body.sticky-drop-active {
     font-weight: 300;
     margin-bottom: 81px;
 
+    @include media('<desktop') {
+      margin-bottom: 19px;
+    }
+
     .title {
         display: block;
         font-weight: 800;
@@ -121,6 +126,11 @@ body.sticky-drop-active {
         font-size: 14px;
         margin-bottom: 34px;
         letter-spacing: 2.5px;
+
+        @include media('<desktop') {
+          font-size: 12px;
+          margin-bottom: 15px;
+        }
 
     }
 }
@@ -156,9 +166,12 @@ body.sticky-drop-active {
 
     @include media('<desktop') {
         display: block;
+        @include animate(opacity visibility);
         position: absolute;
-        left: 20px;
-        top: 103px;
+        left: 23px;
+        top: 104px;
+        visibility: visible;
+        opacity: 1;
     }
 }
 
@@ -168,6 +181,7 @@ body.sticky-drop-active {
     }
 
     .toc-open {
-        display: none;
+        visibility: hidden;
+        opacity: 0;
     }
 }
