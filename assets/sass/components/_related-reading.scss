@@ -31,50 +31,6 @@
         padding: 13px;
     }
 
-    .block {
-        height: 100%;
-        background: color(gray,1);
-        line-height: 1;
-        font-weight: 600;
-        display: block;
-        position: relative;
-        padding: 34px 24px 46px;
-        color: color(black,2);
-        border: 2px solid color(gray,1);
-        @include animate(border-color);
-
-        &:hover {
-            border-color: color(orange);
-        }
-    }
-
-    h6 {
-        font-size: 18px;
-        line-height: 22px;
-        margin-bottom: 14px;
-
-        i {
-            color: color(gray,4);
-            font-size: 12px;
-            margin-left: 5px;
-        }
-    }
-
-    .action {
-        position: absolute;
-        bottom: 22px;
-        left: 25px;
-        color: color(orange);
-        font-weight: 800;
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 0.15em;
-    }
-
-    img {
-        vertical-align: middle;
-    }
-
     + {
         h4,
         .h4 {
@@ -90,11 +46,11 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    padding: 28px 49px 28px 28px;
+    padding: 27px 49px 27px 28px;
     color: color(black,2);
     border: 2px solid color(gray,1);
     @include animate(border-color);
-    margin-bottom: 17px;
+    margin-bottom: 19px;
     align-items: center;
     min-height: 106px;
     letter-spacing: -0.5px;
@@ -110,6 +66,34 @@
 
     @include media('<phone') {
       display: block;
+    }
+
+    &.style-01 {
+        padding: 34px 24px 22px;
+        margin-bottom: 0;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        @include media('<phone') {
+          display: block;
+          height: auto;
+        }
+
+        .action {
+            padding: 0;
+        }
+
+        .description {
+            flex-grow: 1;
+            padding-bottom: 36px;
+        }
+
+        h6 {
+            letter-spacing: -0.5px;
+            margin-bottom: 14px;
+        }
     }
 
     &:hover {

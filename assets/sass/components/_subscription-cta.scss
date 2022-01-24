@@ -46,6 +46,20 @@
     h3 {
         margin-bottom: 20px;
     }
+
+    &.bg-blue {
+        background: color(blue,3);
+
+        .note {
+            a {
+                color: color(white);
+
+                &:hover {
+                    color: color(orange);
+                }
+            }
+        }
+    }
 }
 
 .subscription-form {
