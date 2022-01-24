@@ -1,0 +1,172 @@
+// ---------------------------------------------------------===
+// Subscribe and Voice
+// ---------------------------------------------------------===
+
+.subscribe {
+    margin: 52px 0 64px;
+
+    @include media('<tablet') {
+        margin: 25px 0 35px;
+    }
+
+    .subscribe-list {
+        @extend %listreset;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: -7px -16px;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 1.2;
+
+        @include media('<tablet') {
+            display: block;
+            font-size: 18px;
+        }
+
+        > li {
+            padding: 7px 16px;
+
+            &:hover {
+
+                .drop > a,
+                > a {
+                    color: color(orange,1);
+                }
+            }
+
+            > a {
+                display: inline-block;
+                align-items: center;
+                color: color(blue,1);
+            }
+
+            i {
+                font-size: 10px;
+                margin: -1px 0 0 2px;
+            }
+        }
+    }
+
+    .drop{
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+
+        .drop-list {
+            @extend %listreset;
+            font-size: 16px;
+            text-transform: capitalize;
+            background: #fff;
+            border: 1px solid color(black ,1);
+            border-radius: 3px;
+            padding: 10px 0 15px;
+            position: absolute;
+            right: -29px;
+            top: 100%;
+            width: 187px;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+            @include animate(visibility opacity transform);
+
+            @include media('<tablet') {
+                right: -2px;
+            }
+
+            &:before {
+                content: none;
+            }
+
+            [class^="icon-"] {
+                width: 22px;
+                text-align: center;
+                font-size: 17px;
+                margin-right: 8px;
+            }
+
+            .icon-twitter {
+                font-size: 15px;
+            }
+
+            .icon-iheartradio {
+                font-size: 14px;
+            }
+
+            .icon-deezer {
+                font-size: 11px;
+            }
+
+            li {
+                font-weight: 400;
+            }
+
+            a {
+                display: flex;
+                padding: 4px 10px 4px 21px;
+                align-items: center;
+                color: color(black, 1);
+
+                [class^="icon-"] {
+                    color: color(blue , 1);
+                }
+
+                &:hover {
+                    color: color(blue , 1);
+                }
+            }
+        }
+
+        &:hover ,
+        &.hover {
+            ul {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(5px);
+            }
+        }
+    }
+}
+
+.voice {
+    padding: 16px 0 25px;
+    border: solid color(gray,3);
+    border-width: 2px 0;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    line-height: 1.172;
+    margin-bottom: 30px;
+
+    @include media('<tablet') {
+        font-size: 18px;
+    }
+
+    .title {
+        width: 160px;
+        padding-right: 10px;
+
+        @include media('<tablet') {
+            width: 100%;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    .voice-list {
+        @extend %listreset;
+        flex: 1;
+        margin: -5px -12px;
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            width: 50%;
+            padding: 5px 12px;
+
+            @include media('<tablet') {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -334,40 +334,38 @@ export const StickySidebar = () => {
         var resizeToc = function() {
             const t1 = (window.innerHeight - 130);
             const t2 = toc.find('.top').height();
-
             if(t1 <= t2) {
                 toc.addClass('hide');
             } else {
                 toc.removeClass('hide');
             }
         }
-
         resizeToc();
         $(window).on('load scroll resize orientationchange', resizeToc);
     }*/
 }
 
 export const moveContent = () => {
-	var win = jQuery(window);
-	var wrapper = jQuery('#wrapper');
-	var videoHold = jQuery('.aside-article .text');
+    var win = jQuery(window);
+    var wrapper = jQuery('#wrapper');
+    var videoHold = jQuery('.aside-article .text');
 
-	var desktopContent = jQuery('.desktop-content');
-	var mobileContent = jQuery('.mobile-content');
+    var desktopContent = jQuery('.desktop-content');
+    var mobileContent = jQuery('.mobile-content');
 
-	function init() {
-		if (wrapper.css('z-index') == 99) {
-			mobileContent.append(videoHold);
-		} else {
-			desktopContent.append(videoHold);
-		}
-	}
+    function init() {
+        if (wrapper.css('z-index') == 99) {
+            mobileContent.append(videoHold);
+        } else {
+            desktopContent.append(videoHold);
+        }
+    }
 
-	init()
+    init()
 
-	win.resize(function() {
-		init()
-	})
+    win.resize(function() {
+        init()
+    })
 }
 
 export const Anchor = () => {
@@ -387,19 +385,42 @@ export const Anchor = () => {
 }
 
 export const goTop = () => {
-	var win = jQuery(window);
-	
-	jQuery('.go-top').each(function(){
-		var backBtn = jQuery(this);
-		
-		win.on('load scroll', function(){
-			var offset = jQuery('#header').outerHeight();
-			
-			if (win.scrollTop() > offset) {
-				backBtn.addClass('visible');
-			}else{
-				backBtn.removeClass('visible');
-			}
-		});
-	});
+    var win = jQuery(window);
+    
+    jQuery('.go-top').each(function(){
+        var backBtn = jQuery(this);
+        
+        win.on('load scroll', function(){
+            var offset = jQuery('#header').outerHeight();
+            
+            if (win.scrollTop() > offset) {
+                backBtn.addClass('visible');
+            }else{
+                backBtn.removeClass('visible');
+            }
+        });
+    });
+}
+
+export const Hover = () => {
+    $('.js-dropdown > a').on('click', function (e) {
+        e.preventDefault();
+    });
+
+    document.querySelectorAll('.js-dropdown').forEach(
+        function (
+            dropdown
+        ) {
+            dropdown.addEventListener('mouseenter', (e) => {
+                if (!dropdown.classList.contains('hover')) {
+                    dropdown.classList.add('hover')
+                }
+            })
+            dropdown.addEventListener('mouseleave', (e) => {
+                if (dropdown.classList.contains('hover')) {
+                    dropdown.classList.remove('hover')
+                }
+            })
+        }
+    )
 }

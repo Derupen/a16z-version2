@@ -713,6 +713,10 @@
         margin-right: 0;
     }
 
+    &.has-border-t {
+        border-top: 1px solid color(gray,5);
+    }
+
     .title {
         font-size: 20px;
         font-style: normal;

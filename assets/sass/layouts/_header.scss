@@ -169,6 +169,7 @@
         overflow: auto;
         opacity: 0;
         visibility: hidden;
+        z-index: 9999;
     }
 
     .nav-active & {

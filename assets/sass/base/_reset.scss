@@ -33,6 +33,10 @@ img {
     vertical-align: top;
 }
 
+iframe {
+    display: block;
+}
+
 // google map fix
 .gm-style img {max-width: none}
 

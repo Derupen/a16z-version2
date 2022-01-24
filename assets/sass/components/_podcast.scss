@@ -1,0 +1,119 @@
+// ---------------------------------------------------------===
+// Podcast
+// ---------------------------------------------------------===
+
+.podcast-row {
+    margin-top: 80px;
+
+    h4 {
+        font-weight: 800;
+        margin-bottom: 30px;
+    }
+
+    p + ul {
+        margin-top: -12px;
+    }
+
+    p {
+
+        + ul {
+            margin-top: -12px;
+        }
+
+        + .podcast-detail {
+            margin-top: -6px;
+        }
+    }
+}
+
+.disclosure {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin: -7px 0 20px;
+
+    time {
+        color: color(gray,5);
+        font-weight: 400;
+    }
+}
+
+.podcast-detail {
+    line-height: 1.5;
+
+    .conversation-row {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include media('<tablet') {
+            display: block;
+        }
+
+        + .conversation-row {
+            margin-top: 10px;
+
+            @include media('<tablet') {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .col-l {
+        width: 243px;
+        padding-right: 20px;
+
+        @include media('<tablet') {
+            width: 100%;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+    }
+
+    .col-r {
+        flex: 1;
+    }
+
+    .name {
+        letter-spacing: -0.005em;
+        display: block;
+        font-weight: 700;
+    }
+
+    .duration {
+        color: color(gray,5);
+        letter-spacing: 0.3px;
+    }
+
+    [class*="icon-"] {
+        display: inline-block;
+        margin-left: 5px;
+    }
+
+    .text-orange {
+        color: color(orange,1);
+    }
+
+    .text-green {
+        color: color(green,1);
+    }
+
+    .text-green-dark {
+        color: color(green,2);
+    }
+
+    .text-blue {
+        color: color(blue,3);
+    }
+
+    .text-blue-dark {
+        color: color(blue,2);
+    }
+
+    .text-purple {
+        color: color(purple,1);
+    }
+
+    .text-red {
+        color: color(red,1);
+    }
+}

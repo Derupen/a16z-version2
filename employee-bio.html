@@ -186,7 +186,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" data-toggle="modal" data-target="#modal-1">
                                         <i class="icon-loom"></i>
                                     </a>
                                 </li>
@@ -573,6 +573,25 @@
                 </div>
             </div>
         </footer>
+
+        <div class="modal" id="modal-1">
+            <div class="modal-content">
+                <div class="video-wrap">
+                    <div class="bg-modal" data-dismiss="modal"></div>
+                    <div class="video-frame">
+                        <a href="#" class="modal-close" data-dismiss="modal"></a>
+                        <div class="video">
+                            <a href="#" class="play"></a>
+                            <video poster="assets/images/uploads/video.png">
+                              <source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4' />
+                              <source id='webm' src="http://media.w3.org/2010/05/sintel/trailer.webm" type='video/webm' />
+                              <source id='ogv' src="http://media.w3.org/2010/05/sintel/trailer.ogv" type='video/ogg' />
+                          </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="assets/compiled/js/app.js"></script>
 </body>

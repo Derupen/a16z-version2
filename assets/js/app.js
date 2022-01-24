@@ -19,4 +19,5 @@ $(document).ready(function($){
     Helper.moveContent();
     Helper.Anchor();
     Helper.goTop();
+    Helper.Hover();
 });
