@@ -16,4 +16,5 @@ $(document).ready(function($){
     Helper.Search();
     Helper.SocialNetworks();
     Helper.StickySidebar();
+    Helper.moveContent();
 });

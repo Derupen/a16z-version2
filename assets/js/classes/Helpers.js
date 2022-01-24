@@ -334,3 +334,26 @@ export const StickySidebar = () => {
         $(window).on('load scroll resize orientationchange', resizeToc);
     }*/
 }
+
+export const moveContent = () => {
+	var win = jQuery(window);
+	var wrapper = jQuery('#wrapper');
+	var videoHold = jQuery('.aside-article .text');
+
+	var desktopContent = jQuery('.desktop-content');
+	var mobileContent = jQuery('.mobile-content');
+
+	function init() {
+		if (wrapper.css('z-index') == 99) {
+			mobileContent.append(videoHold);
+		} else {
+			desktopContent.append(videoHold);
+		}
+	}
+
+	init()
+
+	win.resize(function() {
+		init()
+	})
+}
