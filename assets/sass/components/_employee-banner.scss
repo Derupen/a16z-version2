@@ -156,6 +156,7 @@
     left: 24px;
     right: 0;
     z-index: 4;
+    overflow: hidden;
 
     @include media('<desktop') {
         left: 65px;

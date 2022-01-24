@@ -1,6 +1,7 @@
 import '../global.js';
 import '../plugins/masonry'
 import '../plugins/custom-scroll'
+import '../plugins/modal'
 import Swiper from 'swiper/bundle'
 import 'swiper/swiper-bundle.css'
 import 'sticky-sidebar-v2/dist/jquery.sticky-sidebar'
@@ -334,3 +335,4 @@ export const StickySidebar = () => {
         $(window).on('load scroll resize orientationchange', resizeToc);
     }*/
 }
+

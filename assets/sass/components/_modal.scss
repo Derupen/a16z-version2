@@ -1,240 +1,240 @@
-// ---------------------------------------------------------===
-// Modal styles
-// ---------------------------------------------------------===
+// // ---------------------------------------------------------===
+// // Modal styles
+// // ---------------------------------------------------------===
 
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 99999;
-    overflow-y: auto;
-    opacity: 0;
-    visibility: hidden;
-    background-color: rgba(#000, .7);
-    @include animate(opacity visibility);
+// .modal {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     z-index: 99999;
+//     overflow-y: auto;
+//     opacity: 0;
+//     visibility: hidden;
+//     background-color: rgba(#000, .7);
+//     @include animate(opacity visibility);
 
-    .modal-active &.show {
-        opacity: 1;
-        visibility: visible;
-    }
+//     .modal-active &.show {
+//         opacity: 1;
+//         visibility: visible;
+//     }
 
-    .icon {
-        width: 183px;
+//     .icon {
+//         width: 183px;
 
-        @include media('<tablet') {
-            width: 116px;
-        }
-    }
+//         @include media('<tablet') {
+//             width: 116px;
+//         }
+//     }
 
-    .modal-inner {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+//     .modal-inner {
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
 
-        &:after {
-            content: '';
-            min-height: 100vh;
-        }
-    }
+//         &:after {
+//             content: '';
+//             min-height: 100vh;
+//         }
+//     }
 
-    .modal-body {
-        padding: 0 103px 125px;
+//     .modal-body {
+//         padding: 0 103px 125px;
 
-        @include media('<tablet') {
-            padding: 0 24px 52px;
-        }
-    }
+//         @include media('<tablet') {
+//             padding: 0 24px 52px;
+//         }
+//     }
 
-    .modal-footer {
-        text-align: center;
-        text-transform: uppercase;
-        color: color(white);
-        background: color(orange);
-        padding: 16px;
-        font-size: 26px;
-        font-weight: 700;
+//     .modal-footer {
+//         text-align: center;
+//         text-transform: uppercase;
+//         color: color(white);
+//         background: color(orange);
+//         padding: 16px;
+//         font-size: 26px;
+//         font-weight: 700;
 
-        @include media('<tablet') {
-            font-size: 16px;
-            letter-spacing: 1px;
-            padding: 4px;
-            font-weight: 400;
-        }
-    }
-}
+//         @include media('<tablet') {
+//             font-size: 16px;
+//             letter-spacing: 1px;
+//             padding: 4px;
+//             font-weight: 400;
+//         }
+//     }
+// }
 
-.modal-box {
-    width: 100%;
-    max-width: 850px;
-    position: relative;
-    background-color: color(white,1);
-    overflow: hidden;
-    padding-top: 85px;
-    color: color(black,2);
-    font-size: 17px;
-    line-height: 20px;
+// .modal-box {
+//     width: 100%;
+//     max-width: 850px;
+//     position: relative;
+//     background-color: color(white,1);
+//     overflow: hidden;
+//     padding-top: 85px;
+//     color: color(black,2);
+//     font-size: 17px;
+//     line-height: 20px;
 
-    @include media('<tablet') {
-        line-height: 1.4706;
-    }
+//     @include media('<tablet') {
+//         line-height: 1.4706;
+//     }
 
-    .video {
-        video {
-            display: block;
-            width: 100%;
-        }
-    }
+//     .video {
+//         video {
+//             display: block;
+//             width: 100%;
+//         }
+//     }
 
-    .close {
-        position: absolute;
-        top: 29px;
-        right: 29px;
-        font-size: 23px;
-        cursor: pointer;
-        z-index: 1;
-        color: color(black,2);
+//     .close {
+//         position: absolute;
+//         top: 29px;
+//         right: 29px;
+//         font-size: 23px;
+//         cursor: pointer;
+//         z-index: 1;
+//         color: color(black,2);
 
-        @include media('<tablet') {
-            top: 32px;
-            right: 24px;
-        }
+//         @include media('<tablet') {
+//             top: 32px;
+//             right: 24px;
+//         }
 
-        &:hover {
-            color: color(orange);
-        }
-    }
+//         &:hover {
+//             color: color(orange);
+//         }
+//     }
 
-    .social-networks {
-        padding-top: 35px;
+//     .social-networks {
+//         padding-top: 35px;
 
-        @include media('<tablet') {
-            padding: 2px 13px 0 0;
-        }
+//         @include media('<tablet') {
+//             padding: 2px 13px 0 0;
+//         }
 
-        li {
-            padding: 0 0 0 22px;
+//         li {
+//             padding: 0 0 0 22px;
 
-            @include media('<tablet') {
-                padding-left: 16px;
-            }
-        }
+//             @include media('<tablet') {
+//                 padding-left: 16px;
+//             }
+//         }
 
-        a {
-            color: color(blue);
-        }
+//         a {
+//             color: color(blue);
+//         }
 
-        .icon-monitor {
-            font-size: 27px;
+//         .icon-monitor {
+//             font-size: 27px;
 
-            @include media('<tablet') {
-                font-size: 18px;
-            }
-        }
+//             @include media('<tablet') {
+//                 font-size: 18px;
+//             }
+//         }
 
-        .icon-linkedin {
-            font-size: 27px;
+//         .icon-linkedin {
+//             font-size: 27px;
 
-            @include media('<tablet') {
-                font-size: 18px;
-            }
-        }
+//             @include media('<tablet') {
+//                 font-size: 18px;
+//             }
+//         }
 
-        .icon-twitter {
-            font-size: 21px;
+//         .icon-twitter {
+//             font-size: 21px;
 
-            @include media('<tablet') {
-                font-size: 18px;
-            }
-        }
-    }
+//             @include media('<tablet') {
+//                 font-size: 18px;
+//             }
+//         }
+//     }
 
-    h2 {
-        font-size: 39px;
-        text-transform: capitalize;
-        color: color(orange);
-        margin-bottom: 15px;
+//     h2 {
+//         font-size: 39px;
+//         text-transform: capitalize;
+//         color: color(orange);
+//         margin-bottom: 15px;
 
-        @include media('<tablet') {
-            font-size: 28px;
-            margin-bottom: 5px;
-        }
-    }
+//         @include media('<tablet') {
+//             font-size: 28px;
+//             margin-bottom: 5px;
+//         }
+//     }
 
-    .intro-txt {
-        border-bottom: 1px solid color(gray,5);
-        padding-bottom: 25px;
-        margin-bottom: 37px;
+//     .intro-txt {
+//         border-bottom: 1px solid color(gray,5);
+//         padding-bottom: 25px;
+//         margin-bottom: 37px;
 
-        @include media('<tablet') {
-            padding-bottom: 0;
-            margin-bottom: 11px;
-        }
-    }
-}
+//         @include media('<tablet') {
+//             padding-bottom: 0;
+//             margin-bottom: 11px;
+//         }
+//     }
+// }
 
-.modal-head {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-    align-items: center;
+// .modal-head {
+//     display: flex;
+//     justify-content: space-between;
+//     margin-bottom: 40px;
+//     align-items: center;
 
-    @include media('<tablet') {
-        margin-bottom: 30px;
-    }
+//     @include media('<tablet') {
+//         margin-bottom: 30px;
+//     }
 
-    a {
-        color: color(blue);
-    }
-}
+//     a {
+//         color: color(blue);
+//     }
+// }
 
-.articles-list {
-    margin-bottom: 41px;
+// .articles-list {
+//     margin-bottom: 41px;
 
-    @include media('<tablet') {
-        margin-bottom: 32px;
-    }
+//     @include media('<tablet') {
+//         margin-bottom: 32px;
+//     }
 
-    ul {
-        @extend %listreset;
-        padding-top: 12px;
+//     ul {
+//         @extend %listreset;
+//         padding-top: 12px;
 
-        @include media('<tablet') {
-            padding-top: 9px;
-        }
-    }
+//         @include media('<tablet') {
+//             padding-top: 9px;
+//         }
+//     }
 
-    li {
-        margin-bottom: 32px;
+//     li {
+//         margin-bottom: 32px;
 
-        @include media('<tablet') {
-            margin-bottom: 18px;
-        }
-    }
+//         @include media('<tablet') {
+//             margin-bottom: 18px;
+//         }
+//     }
 
-    h6 {
-        font-size: 26px;
-        margin-bottom: 11px;
+//     h6 {
+//         font-size: 26px;
+//         margin-bottom: 11px;
 
-        @include media('<tablet') {
-            font-size: 18px;
-            line-height: 21px;
-        }
+//         @include media('<tablet') {
+//             font-size: 18px;
+//             line-height: 21px;
+//         }
 
-        a {
-            color: color(black,2);
-        }
-    }
+//         a {
+//             color: color(black,2);
+//         }
+//     }
 
-    .author {
-        display: block;
-        font-size: 21px;
-        color: color(gray,5);
-        text-transform: capitalize;
+//     .author {
+//         display: block;
+//         font-size: 21px;
+//         color: color(gray,5);
+//         text-transform: capitalize;
 
-        @include media('<tablet') {
-            font-size: 14px;
-        }
-    }
-}
+//         @include media('<tablet') {
+//             font-size: 14px;
+//         }
+//     }
+// }

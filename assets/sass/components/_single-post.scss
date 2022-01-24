@@ -115,7 +115,7 @@
 		}
 	}
 
-	ul {
+	ul:not([class]) {
 		@extend %listreset;
 		margin-bottom: 86px;
 
