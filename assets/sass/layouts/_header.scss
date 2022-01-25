@@ -10,6 +10,10 @@
     line-height: 1.389;
     font-weight: 300;
 
+    .bar-close & {
+        display: none;
+    }
+
     .container {
         position: relative;
         padding-left: 24px;
@@ -39,6 +43,7 @@
     padding: 40px 0;
     position: relative;
     z-index: 9998;
+    background: color(white,1);
 
     @include media('<desktop') {
         padding: 25px 0;
@@ -58,6 +63,14 @@
             background-image: url('#{$image-path}/bg-nav-tablet.png');
             height: 75px;
         }
+    }
+
+    .fixed-header & {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
     }
 
     .nav-active &{
@@ -98,8 +111,11 @@
             color: color(black,2);
 
             .nav-active & {
-                opacity: 0;
-                visibility: hidden;
+
+                @include media('<desktop') {
+                    opacity: 0;
+                    visibility: hidden;
+                }
             }
         }
 
@@ -111,8 +127,11 @@
             visibility: hidden;
 
             .nav-active & {
-                opacity: 1;
-                visibility: visible;
+
+                @include media('<desktop') {
+                    opacity: 1;
+                    visibility: visible;
+                }
             }
         }
     }
@@ -221,6 +240,10 @@
 
             &:hover {
 
+                > a {
+                    color: color(orange,1);
+                }
+
                 .dropdown {
                     opacity: 1;
                     visibility: visible;
@@ -234,6 +257,10 @@
                     color: color(white,1);
                 }
 
+                &:hover {
+                    color: color(orange,1);
+                }
+
                 &.hasdrop-a {
 
                     @include media('<desktop') {
@@ -243,10 +270,23 @@
                         position: relative;
                     }
 
+                    &.active {
+
+                        @include media('<tablet') {
+                            color: color(orange,1);
+                        }
+                    }
+
+                    &.active:after,
+                    &:hover:after {
+                        color: color(orange,1);
+                    }
+
                     &:after {
 
                         @include media('<desktop') {
                             content: "\e915";
+                            @include animate(color);
                             @include box-align(vc);
                             color: color(white,1);
                             right: 0;
@@ -275,6 +315,10 @@
 
     .search-opener {
         color: color(black,2);
+
+        &:hover {
+            color: color(orange,1);
+        }
 
         @include media('<desktop') {
             @include box-align(vc);

@@ -20,4 +20,6 @@ $(document).ready(function($){
     Helper.Anchor();
     Helper.goTop();
     Helper.Hover();
+    Helper.FixedHeader();
+    Helper.ToggleButton();
 });
