@@ -172,10 +172,10 @@ export const SwiperSlider = () => {
         slidesPerView: "1",
         loop:true,
         centeredSlides: true,
-        autoplay: {
-          delay: 1000,
-          disableOnInteraction: true,
-        },
+        // autoplay: {
+        //   delay: 1000,
+        //   disableOnInteraction: true,
+        // },
         speed: 6000,
         pagination: {
           el: ".swiper-pagination",
@@ -183,7 +183,7 @@ export const SwiperSlider = () => {
         },
 
         breakpoints: {
-            768: {
+            1024: {
                 slidesPerView: 3,
                 spaceBetween: 20
             },
@@ -223,7 +223,7 @@ export const SwiperSlider = () => {
 
 
 export const MobileSwiper = () => {
-    const breakpoint = window.matchMedia('(min-width: 768px)');
+    const breakpoint = window.matchMedia('(min-width: 1024px)');
 
     let mySwiper;
 

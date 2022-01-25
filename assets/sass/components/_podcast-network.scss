@@ -16,18 +16,48 @@
         margin-bottom: 52px;
 
         @include media('<desktop') {
-            margin-bottom: 42px;
+            margin-bottom: 0;
         }
     }
 
     .podcast-slider {
         position: relative;
+
+        @include media('<desktop') {
+            max-width: 484px;
+            margin: 0 auto;
+            overflow: hidden;
+            padding-top: 42px;
+        }
+    }
+
+    .pagination-wrapper {
+
+        @include media('<desktop') {
+            height: 355px;
+            position: absolute;
+            top: 42px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            align-items: flex-end;
+            padding-bottom: 20px;
+
+            .swiper-pagination-bullet {
+                border-color: color(white,1);
+
+                &:hover,
+                &.swiper-pagination-bullet-active {
+                    background: color(white,1);
+                }
+            }
+        }
     }
 
     .swiper-pagination {
         padding-top: 20px;
 
-        @include media('>=tablet') {
+        @include media('>=desktop') {
             display: none;
         }
     }
@@ -39,27 +69,27 @@
     position: relative;
 
     @include media('<desktop') {
-        width: 216px;
-        height: 216px;
-    }
-
-    @include media('<tablet') {
         width: 100%;
         height: auto;
     }
+
+    // @include media('<tablet') {
+    //     width: 216px;
+    //     height: 216px;
+    // }
 
     &:hover {
 
         .front {
 
-            @include media('>=tablet') {
+            @include media('>=desktop') {
                 transform: perspective(1000px) rotateY(180deg);
             }
         }
 
         .back{
 
-            @include media('>=tablet') {
+            @include media('>=desktop') {
                 transform: perspective(1000px) rotateY(0deg);
                 box-shadow: 0 0 20px 5px rgba(75, 79, 84, 0.2);
             }
@@ -67,15 +97,19 @@
     }
 
     .front {
-        width: 100%;
-        padding-top: 100%;
         position: relative;
-        box-shadow: 0 0 20px 5px rgba(75, 79, 84, 0.2);
+        width: 355px;
+        height: 355px;
+        margin: 0 auto;
 
-        @include media('>=tablet') {
+        @include media('>=desktop') {
+            width: 100%;
+            height: auto;
+            padding-top: 100%;
             backface-visibility: hidden;
             transform: perspective(1000px) rotateY(0deg);
             transition: 0.3s;
+            box-shadow: 0 0 20px 5px rgba(75, 79, 84, 0.2);
         }
     }
 
@@ -87,11 +121,29 @@
         left: 0;
         background-size: cover; 
         background-position: 50% 50%;
+
+        @include media('<desktop') {
+            box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        &:before {
+
+            @include media('<desktop') {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 76.56%, rgba(0, 0, 0, 0.35) 100%);
+                z-index: 1;
+            }
+        }
     }
 
     .back {
 
-        @include media('>=tablet') {
+        @include media('>=desktop') {
             position: absolute;
             top: 0;   
             left: 0;
@@ -105,12 +157,12 @@
             transition: 0.3s;
         }
 
-        @include media('>=desktop') {
+        @include media('>=widescreen') {
             padding: 30px 21px;
             border-width: 3px;
         }
 
-        @include media('<tablet') {
+        @include media('<desktop') {
             padding: 24px;
         }
     }
@@ -124,11 +176,11 @@
         line-height: 1.2727;
         letter-spacing: -0.005em;
 
-        @include media('<desktop') {
-            font-size: 12px;
-        }
+        // @include media('<desktop') {
+        //     font-size: 12px;
+        // }
 
-        @include media('<tablet') {
+        @include media('<desktop') {
             font-size: 16px;
             line-height: 1.25;
         }
@@ -141,12 +193,12 @@
             display: block;
             margin-bottom: 20px;
 
-            @include media('<desktop') {
-                font-size: 22px;
-                margin-bottom: 10px;
-            }
+            // @include media('<desktop') {
+            //     font-size: 22px;
+            //     margin-bottom: 10px;
+            // }
 
-            @include media('<tablet') {
+            @include media('<desktop') {
                 color: color(orange,1);
                 font-size: 28px;
                 line-height: 1;
@@ -164,6 +216,13 @@
                 @include media('<desktop') {
                     font-size: 12px;
                 }
+            }
+        }
+
+        .btm {
+
+            @include media('>=tablet', '<desktop') {
+                text-align: center;
             }
         }
     }

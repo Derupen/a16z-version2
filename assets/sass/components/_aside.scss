@@ -18,6 +18,28 @@
         border: none;
     }
 
+    &.on-desktop {
+
+        @include media('>=tablet', '<desktop') {
+            display: none;
+        }
+    }
+
+   &.on-tablet {
+        display: none;
+
+        @include media('>=tablet', '<desktop') {
+            display: block;
+            padding: 0 65px 132px;
+            max-width: 614px;
+            margin: 0 auto;
+
+            .link-wrap {
+                text-align: center;
+            }
+        }
+   } 
+
     &.on-mobile {
         padding: 0 24px 24px;
     }

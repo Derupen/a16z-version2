@@ -22,6 +22,7 @@
     "sass-loader": "12.0.0"
   },
   "dependencies": {
+    "jquery-match-height": "^0.7.2",
     "jquery-validation": "^1.19.3",
     "sticky-sidebar-v2": "^1.1.1",
     "swiper": "^6.8.4"

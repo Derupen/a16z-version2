@@ -14,7 +14,7 @@
     }
 
     @include media('<desktop') {
-        margin: -15px -25px;
+        margin: -15px -11px;
     }
 
     @include media('<tablet') {
@@ -30,7 +30,7 @@
         }
 
         @include media('<desktop') {
-            padding: 15px 25px;
+            padding: 15px 11px;
         }
 
         @include media('<tablet') {

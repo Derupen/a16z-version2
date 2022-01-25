@@ -19,11 +19,7 @@
         margin-bottom: 58px;
 
         @include media('<desktop') {
-            margin-bottom: 48px;
-        }
-
-        @include media('<tablet') {
-            margin-bottom: 38px;
+            margin-bottom: 0;
         }
     }
 
@@ -31,7 +27,7 @@
 
         .swiper-wrapper {
 
-            @include media('>=tablet') {
+            @include media('>=desktop') {
                 box-sizing: border-box
             }
         }
@@ -46,6 +42,15 @@
         }
     }
 
+    .swiper-container-pointer-events {
+
+        @include media('<desktop') {
+            overflow: hidden;
+            max-width: 484px;
+            margin: 0 auto;
+        }
+    }
+
     .cols-wrap {
         margin: -50px -75px;
 
@@ -53,12 +58,12 @@
             margin: -30px;
         }
 
-        @include media('>=tablet') {
+        @include media('>=desktop') {
              display: flex;
             flex-wrap: wrap;
         }
 
-        @include media('<tablet') {
+        @include media('<desktop') {
             margin: 0;
         }
 
@@ -74,9 +79,6 @@
 
             @include media('<desktop') {
                 width: 100%;
-            }
-
-            @include media('<tablet') {
                 padding: 0;
             }
         }
@@ -114,13 +116,10 @@
         }
 
         @include media('<desktop') {
-            width: 220px;
-        }
-
-        @include media('<tablet') {
             width: 216px;
             margin: 0 auto 50px;
             text-align: center;
+            padding-top: 48px;
         }
 
         img {
@@ -135,10 +134,6 @@
         flex: 1;
 
         @include media('<desktop') {
-            padding-left: 45px;
-        }
-
-        @include media('<tablet') {
             padding: 0;
             width: 100%;
             flex: none;
@@ -147,12 +142,9 @@
         h6 {
 
             @include media('<desktop') {
-                margin-bottom: 9px;
-            }
-
-            @include media('<tablet') {
                 font-size: 20px;
                 line-height: 1.15;
+                margin-bottom: 9px;
             }
         }
     }
@@ -160,15 +152,31 @@
     .author {
         margin-bottom: 20px;
 
-        @include media('<tablet') {
+        @include media('<desktop') {
             margin-bottom: 35px;
+        }
+    }
+
+    .link-wrap {
+
+        @include media('>=tablet', '<desktop') {
+            text-align: center;
         }
     }
 
     .link {
 
-        @include media('<tablet') {
+        @include media('<desktop') {
             margin-top: 9px;
+        }
+    }
+
+    .pagination-wrapper {
+
+        @include media('<desktop') {
+            border-top: 1px solid color(gray,5);
+            padding-top: 30px;
+            margin-top: 30px;
         }
     }
 }
