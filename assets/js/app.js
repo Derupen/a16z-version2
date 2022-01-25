@@ -20,6 +20,7 @@ $(document).ready(function($){
     Helper.Anchor();
     Helper.goTop();
     Helper.Hover();
+    Helper.initLightbox();
     Helper.FixedHeader();
     Helper.ToggleButton();
 });

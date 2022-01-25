@@ -5,6 +5,7 @@ import '../plugins/modal'
 import Swiper from 'swiper/bundle'
 import 'swiper/swiper-bundle.css'
 import 'sticky-sidebar-v2/dist/jquery.sticky-sidebar'
+import '../plugins/featherlight'
 
 
 export const MobileNav = () => {
@@ -424,6 +425,16 @@ export const Hover = () => {
             })
         }
     )
+}
+
+export const initLightbox = () => {
+    $('.single-blog-post .chart .zoom').each((link_id, link) => {
+        if(checkImageURL(link.getAttribute('href'))) {
+            $(link)
+                .addClass('image-link-popup')
+                .featherlight();
+        }
+    });
 }
 
 export const FixedHeader = () => {
