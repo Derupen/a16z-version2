@@ -1,6 +1,7 @@
 import '../global.js';
 import '../plugins/masonry'
 import '../plugins/custom-scroll'
+import '../plugins/modal'
 import Swiper from 'swiper/bundle'
 import 'swiper/swiper-bundle.css'
 import 'sticky-sidebar-v2/dist/jquery.sticky-sidebar'
@@ -433,5 +434,25 @@ export const initLightbox = () => {
                 .addClass('image-link-popup')
                 .featherlight();
         }
+    });
+}
+
+export const FixedHeader = () => {
+    $(window).scroll(function(){
+        var offset = jQuery('.hello-bar').outerHeight() || 0;
+
+        if ($(window).scrollTop() >= offset) {
+            $('#wrapper').addClass('fixed-header');
+        }
+        else {
+            $('#wrapper').removeClass('fixed-header');
+        }
+    });
+}
+
+export const ToggleButton = () => {
+    $(".hello-bar .close").click(function(){
+        $('body').toggleClass("bar-close");
+        e.preventDefault();
     });
 }

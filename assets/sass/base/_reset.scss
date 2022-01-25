@@ -55,4 +55,12 @@ iframe {
     table-layout: fixed;
     height: 100%;
     width: 100%;
+
+    &.fixed-header {
+        padding-top: 134px;
+
+        @include media('<desktop') {
+            padding-top: 105px;
+        }
+    }
 }

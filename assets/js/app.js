@@ -21,4 +21,6 @@ $(document).ready(function($){
     Helper.goTop();
     Helper.Hover();
     Helper.initLightbox();
+    Helper.FixedHeader();
+    Helper.ToggleButton();
 });
