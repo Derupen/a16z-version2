@@ -9,7 +9,7 @@
     padding: 32px 0 52px;
 
     @include media('<wider') {
-        margin-right: -12px;
+        margin-right: 0;
     }
 
     .col {

@@ -9,6 +9,10 @@
         margin-right: 0;
     }
 
+    @include media('<desktop') {
+        margin-bottom: 34px;
+    }
+
     .image-slider {
         overflow: hidden;
         position: relative;

@@ -9,6 +9,7 @@
     margin-bottom: 141px;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 
     @include media('<desktop') {
         padding-top: 50px;
@@ -43,8 +44,9 @@
         max-width: 960px;
         margin-left: -5px;
 
-        @include media('<desktop') {
+        @include media('<widescreen') {
             margin-left: 0;
+            overflow: hidden;
         }
     }
 
@@ -779,7 +781,7 @@
     position: fixed;
     top: 50%;
     right: 22px;
-    z-index: 1;
+    z-index: 2;
     color: color(white);
     @include animate(background);
     display: none;
@@ -816,10 +818,6 @@
             opacity: 1;
         }
     }
-}
-
-.w1 {
-    overflow: hidden;
 }
 
 .extra-bold {
